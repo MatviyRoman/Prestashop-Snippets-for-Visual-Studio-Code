@@ -1,0 +1,30 @@
+{
+	"p:media_phone": {
+		"prefix": "p:media_phone",
+		"body": ["@media screen and (max-width: 767px){", "\t$0", "}"],
+		"description": "Generate Media Query Phone"
+	},
+	"p:media_tablet": {
+		"prefix": "p:media_tablet",
+		"body": [
+			"@media screen and (min-width: 768px) and (max-width: 991px){",
+			"\t$0",
+			"}"
+		],
+		"description": "Generate Media Query Tablet"
+	},
+	"p:media_desktop": {
+		"prefix": "p:media_desktop",
+		"body": ["@media screen and (min-width: 992px){", "\t$0", "}"],
+		"description": "Generate Media Query Desktop"
+	},
+	"p:flex-center": {
+		"prefix": "p:flex-center",
+		"body": [
+			"\tdisplay: flex;",
+			"\tjustify-content: center;",
+			"\talign-items: center;"
+		],
+		"description": "Display Flex-Center"
+	}
+}
