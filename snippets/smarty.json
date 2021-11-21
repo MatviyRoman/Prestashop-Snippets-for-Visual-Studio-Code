@@ -1,0 +1,96 @@
+{
+	"p:l": {
+		"prefix": "p:l",
+		"body": ["{l s='$0' ${1:mod=''} ${2:d=''}}"],
+		"description": "traduction smarty"
+	},
+	"p:l-params": {
+		"prefix": "p:l-params",
+		"body": [
+			"{l s='%d $0' sprintf=[\\$${3:var}|intval] ${1:mod=''} ${2:d=''} }"
+		],
+		"description": "traduction smarty"
+	},
+	"p:link-page-1-6": {
+		"prefix": "p:link-page-1.6",
+		"body": ["{$link->getPageLink()}"],
+		"description": "Link to page (new-products, specials, my-account etc.) for prestashop 1.6"
+	},
+	"p:link-page-1-7": {
+		"prefix": "p:link-page-1.7",
+		"body": ["{url entity='my-account' params=['edited' => 1, 'id' => $id]}"],
+		"description": "Link to page (new-products, specials, my-account etc.) for prestashop 1.7"
+	},
+	"p:link-category-1-6": {
+		"prefix": "p:link-category-1.6",
+		"body": ["{$link->getCategoryLink()}"],
+		"description": "Link to category for prestashop 1.6"
+	},
+	"p:link-category-1-7": {
+		"prefix": "p:link-category-1.7",
+		"body": ["{url entity='category' id=3 id_lang=2}"],
+		"description": "Link to category for prestashop 1.7"
+	},
+	"p:link-product-1-6": {
+		"prefix": "p:link-product-1.6",
+		"body": ["{$link->getProductLink()}"],
+		"description": "Link to product for prestashop 1.6"
+	},
+	"p:link-product-1-7": {
+		"prefix": "p:link-product-1.7",
+		"body": ["{url entity='product' id=26}"],
+		"description": "Link to product for prestashop 1.7"
+	},
+	"p:link-cms-page-1-6": {
+		"prefix": "p:link-cms-page-1.6",
+		"body": ["{$link->getCmsLink()}"],
+		"description": "Link to CMS page for prestashop 1.6"
+	},
+	"p:link-cms-page-1-7": {
+		"prefix": "p:link-cms-page-1.7",
+		"body": ["{url entity='cms' id=3 id_lang=2}"],
+		"description": "Link to CMS page for prestashop 1.7"
+	},
+	"p:link-module-1-6": {
+		"prefix": "p:link-module-1.6",
+		"body": ["{$link->getModuleLink()}"],
+		"description": "Link to module for prestashop 1.6"
+	},
+	"p:link-module-1-7": {
+		"prefix": "p:link-module-1.7",
+		"body": [
+			"{url entity='module' name='myModule' controller='myController' params = ['paramKey1' => $paramValue1, 'paramKey2' => $paramValue2]}"
+		],
+		"description": "Link to module for prestashop 1.7"
+	},
+	"p:link-image-1-6": {
+		"prefix": "p:link-image-1.6",
+		"body": ["{$link->getCatImageLink()}"],
+		"description": "Link to image for prestashop 1.7"
+	},
+	"p:link-image-1-7": {
+		"prefix": "p:link-image-1.7",
+		"body": ["{url entity='categoryImage' id=$id_category name='imageType'}"],
+		"description": "Link to image for prestashop 1.7 ImageType: cart_default (125px x 125px) / small_default (98px x 98px) / medium_default (452px x 452px) / home_default (250px x 250px) / large_default (800px x 800px) / category_default (141px x 180px) / stores_default (170px x 115px)"
+	},
+	"p:dump": {
+		"prefix": "p:dump",
+		"body": ["{\\$$0|dump}"],
+		"description": "Dump function for Smarty"
+	},
+	"p:vdump": {
+		"prefix": "p:vdump",
+		"body": ["{\\$$0|var_dump}"],
+		"description": "var_dump function for Smarty"
+	},
+	"Call a Prestashop Widget": {
+		"prefix": "p:widget",
+		"body": ["{widget name='${1:module_name}' hook='${2:hook_name}'}"],
+		"description": "Call a Prestashop Widget"
+	},
+	"Call a Prestashop Hook": {
+		"prefix": "p:hook",
+		"body": ["{hook h='${1:hook_name}' mod='${2:module_name}'}"],
+		"description": "Call a Prestashop Hook"
+	}
+}

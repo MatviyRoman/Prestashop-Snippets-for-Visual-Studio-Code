@@ -1,0 +1,94 @@
+{
+	"name": "prestashop-snippets",
+	"publisher": "apartner-top",
+	"displayName": "Prestashop Snippets",
+	"description": "Prestashop Snippets (php, smarty, twig, sql, html, css, scss, sass, less, js, javascript, jquery)",
+	"version": "0.0.9",
+	"icon": "images/logo.jpg",
+	"repository": "https://github.com/MatviyRoman/Prestashop-Snippets-for-Visual-Studio-Code.git",
+	"engines": {
+		"vscode": "^1.30.0"
+	},
+	"keywords": [
+		"Prestashop",
+		"apartner",
+		"programist",
+		"apartner.top",
+		"programist.top",
+		"php",
+		"css",
+		"scss",
+		"sass",
+		"less",
+		"smarty",
+		"twig",
+		"snippet",
+		"snippets",
+		"js",
+		"javascript",
+		"java script",
+		"jquery"
+	],
+	"categories": [
+		"Snippets",
+		"Other"
+	],
+	"activationEvents": [
+		"onCommand:prestashop-snippets.helloWorld"
+	],
+	"main": "./extension.js",
+	"contributes": {
+		"commands": [
+			{
+				"command": "prestashop-snippets.helloWorld",
+				"title": "Hello World"
+			}
+		],
+		"snippets": [
+			{
+				"language": "php",
+				"path": "./snippets/php.json"
+			},
+			{
+				"language": "smarty",
+				"path": "./snippets/smarty.json"
+			},
+			{
+				"language": "css",
+				"path": "./snippets/css.json"
+			},
+			{
+				"language": "scss",
+				"path": "./snippets/css.json"
+			},
+			{
+				"language": "sass",
+				"path": "./snippets/css.json"
+			},
+			{
+				"language": "less",
+				"path": "./snippets/css.json"
+			},
+			{
+				"language": "html",
+				"path": "./snippets/html.json"
+			}
+		]
+	},
+	"scripts": {
+		"lint": "eslint .",
+		"pretest": "npm run lint",
+		"test": "node ./test/runTest.js"
+	},
+	"devDependencies": {
+		"@types/vscode": "^1.30.0",
+		"@types/glob": "^7.1.4",
+		"@types/mocha": "^9.0.0",
+		"@types/node": "14.x",
+		"eslint": "^8.1.0",
+		"glob": "^7.1.7",
+		"mocha": "^9.1.3",
+		"typescript": "^4.4.4",
+		"@vscode/test-electron": "^1.30.0"
+	}
+}
