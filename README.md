@@ -126,6 +126,8 @@ Smarty language pack & PHP Symbols & PHP DocBlocker & HTML $ CSS!
 Author : [Roman Matviy](https://roman.programist.top)
 <br>
 Site : [https://matviy.pp.ua](https://matviy.pp.ua)
+<br>
+Source : [https://marketplace.visualstudio.com/items?itemName=apartner-top.prestashop-snippets](https://marketplace.visualstudio.com/items?itemName=apartner-top.prestashop-snippets)
 
 ### For more information
 
