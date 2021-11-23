@@ -4,22 +4,31 @@
 		"body": [
 			"\\$this->context->smarty->assign(",
 			"\tarray(",
-			"\t\t'$1' => \\$$2,$0",
+			"\t\t'${0:varriable_name}' => \\$$2,$0",
 			"\t)",
 			");"
 		],
-		"description": "Db::getInstance->getPrefix()"
+		"description": "$this->context->smarty->assign()"
 	},
+
 	"p:getval": {
 		"prefix": "p:getval",
-		"body": ["Tools::getValue('$0')"],
-		"description": "Tools::getValue()"
+		"body": ["Tools::getValue('$0');"],
+		"description": "Get value from $_GET or $_POST Tools::getValue()"
 	},
+
 	"p:prefix": {
 		"prefix": "p:prefix",
-		"body": ["Db::getInstance->getPrefix()"],
+		"body": ["Db::getInstance->getPrefix();"],
 		"description": "Db::getInstance->getPrefix()"
 	},
+
+	"Generate token for module or adminController": {
+		"prefix": "p:token",
+		"body": ["Tools::getAdminTokenLite('${0:admin_controller_name}');"],
+		"description": "Generate token for module or adminController"
+	},
+
 	"p:psquery": {
 		"prefix": "p:psquery",
 		"body": [
@@ -33,16 +42,19 @@
 		],
 		"description": "Prestashop DB Query"
 	},
+
 	"p:sqlrow": {
 		"prefix": "p:sqlrow",
 		"body": ["Db::getInstance()->getRow($0);"],
 		"description": "Prestashop DB getRow function"
 	},
+
 	"p:sqlval": {
 		"prefix": "p:sqlval",
 		"body": ["Db::getInstance()->getValue($0);"],
 		"description": "Prestashop DB getValue function"
 	},
+
 	"p:class": {
 		"prefix": "p:class",
 		"body": [
@@ -62,8 +74,8 @@
 			"\tpublic \\$${8:active};",
 			"",
 			"\tpublic static \\$definition = array(",
-			"\t\t'table'     => 'nom_de_la_table_sans_prefix',",
-			"\t\t'primary'   => 'Clé primaire',",
+			"\t\t'table'     => 'name_of_table_without_prefix',",
+			"\t\t'primary'   => 'Primary key',",
 			"\t\t'multilang' => false,",
 			"\t\t'fields'    => array(",
 			"\t\t\t'${2:'id'}' => array('type' => self::TYPE_INT, 'validate' => 'isInt'),",
@@ -79,6 +91,7 @@
 		],
 		"description": "Create a Prestashop Object Model Sample"
 	},
+
 	"p:module": {
 		"prefix": "p:module",
 		"body": [
@@ -102,14 +115,14 @@
 			"\t\t\\$this->name = '${2:${TM_FILENAME_BASE/(.*)/${1:/downcase}/}<<}';",
 			"\t\t\\$this->tab = 'front_office_features';",
 			"\t\t\\$this->version = '1.0.0';",
-			"\t\t\\$this->author = 'MDWeb';",
+			"\t\t\\$this->author = 'Roman Matviy';",
 			"\t\t\\$this->need_instance = 0;",
 			"\t\t\\$this->bootstrap = true;",
 			"",
 			"\t\tparent::__construct();",
 			"",
-			"\t\t\\$this->displayName = \\$this->l('${3:Nom du module visible dans le BO}');",
-			"\t\t\\$this->description = \\$this->l('${4:Description du module visible dans le BO}');",
+			"\t\t\\$this->displayName = \\$this->l('${3: Name of the module visible in the BO}');",
+			"\t\t\\$this->description = \\$this->l('${4: Description of the module visible in the BO}');",
 			"\t}",
 			"",
 			"\tpublic function install()",
@@ -129,25 +142,26 @@
 			"",
 			"\tpublic function hookHeader(\\$params)",
 			"\t{",
-			"\t\t// Ajout du fichier CSS pour le front",
+			"\t\t// Added CSS file for the front",
 			"\t\t\\$this->context->controller->addCSS(\\$this->_path.'views/css/front.css');",
 			"\t}",
 			"",
 			"\tpublic function hookFooter(\\$params)",
 			"\t{",
-			"\t\t// Ajout du fichier JS pour le front",
+			"\t\t// Added JS file for the front",
 			"\t\t\\$this->context->controller->addJS(\\$this->_path.'views/js/front.js');",
 			"\t}",
 			"",
 			"\tpublic function hook${5/(.*)/${1:/capitalize}/}(\\$params)",
 			"\t{",
-			"\t\t// Ajout du fichier JS pour le front",
+			"\t\t// Added JS file for the front",
 			"\t\t\\$this->context->controller->addJS(\\$this->_path.'views/js/front.js');",
 			"\t}",
 			"}"
 		],
 		"description": "Show a Prestashop module sample"
 	},
+
 	"Generate a Mail::send": {
 		"prefix": "p:mail_send",
 		"body": [

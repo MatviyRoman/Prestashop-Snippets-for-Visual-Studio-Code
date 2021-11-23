@@ -5,23 +5,29 @@ Prestashop snippets for 1.6 and 1.7 versions.
 ## Snippets PHP
 
 -  p:getval => Tools::getValue('');
--  p:prefix => Db::getInstance->getPrefix()
+-  p:prefix => Db::getInstance->getPrefix();
+-  p:token => Give a admin token Tools::getAdminTokenLite('<admin_controller_name>');
 -  p:psquery => Show an instance of DBQuery
 -  p:sqlrow => Give a Db::getInstance()->getRow($sql);
 -  p:sqlval => Give a Db::getInstance()->getValue($sql);
 -  p:class => Create a Prestashop object model sample !
 -  p:module => Create a Prestashop Module sample !
--  p:assign => Give a $this->context->smarty->assign(array())
+-  p:assign => Give a $this->context->smarty->assign(array());
 -  p:mail_send => Give a complete Mail::send() call
 
 ## Snippets Smarty
 
 -  p:l => {l s='' mod='' d=''}
--  p:l => {l s='' sprintf=[$var|intval] mod='' d=''}
+-  p:l => {l s='' sprintf=[$var|intval] mod='<module_name>' d=''}
 -  p:dump => {$var|dump}
 -  p:vdump => {$var|var_dump}
 -  p:hook => {hook h='<hook_name>' mod='<hook_name>'}
 -  p:widget => {widget name='<module_name>' hook='<hook_name>'}
+-  p:token => {Tools::getAdminTokenLite('<admin_controller_name>')}
+
+### Link to admin controller
+
+-  p:link-admin-controller => {$link->getAdminLink('<admin_controller_name>')}
 
 ### Link to page (new-products, specials, my-account etc.)
 
@@ -40,7 +46,7 @@ Prestashop snippets for 1.6 and 1.7 versions.
 
 ### Link to module
 
--  p:link-module-1.6 => {$link->getModuleLink()}
+-  p:link-module-1.6 => {$link->getModuleLink('<module_name>','<controller_name>')}
 -  p:link-module-1.7 => {url entity='module' name='myModule' controller='myController' params = ['paramKey1' => $paramValue1, 'paramKey2' => $paramValue2]}
 
 ### Link to image

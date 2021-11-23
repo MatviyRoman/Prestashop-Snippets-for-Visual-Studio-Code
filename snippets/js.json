@@ -1,0 +1,12 @@
+{
+	"For Loop": {
+		"prefix": "for",
+		"body": [
+			"for (var ${index} = 0; ${index} < ${array}.length; ${index}++) {",
+			"\tvar ${element} = ${array}[${index}];",
+			"\t$0",
+			"}"
+		],
+		"description": "For Loop"
+	}
+}
