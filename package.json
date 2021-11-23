@@ -3,7 +3,7 @@
 	"publisher": "apartner-top",
 	"displayName": "Prestashop Snippets",
 	"description": "Prestashop Snippets (php, smarty, twig, sql, html, css, scss, sass, less, js, javascript, jquery)",
-	"version": "0.0.9",
+	"version": "0.1.2",
 	"icon": "images/logo.jpg",
 	"repository": "https://github.com/MatviyRoman/Prestashop-Snippets-for-Visual-Studio-Code.git",
 	"engines": {
@@ -71,8 +71,12 @@
 				"path": "./snippets/css.json"
 			},
 			{
-				"language": "html",
-				"path": "./snippets/html.json"
+				"language": "javascript",
+				"path": "./snippets/js.json"
+			},
+			{
+				"language": "js",
+				"path": "./snippets/js.json"
 			}
 		]
 	},
