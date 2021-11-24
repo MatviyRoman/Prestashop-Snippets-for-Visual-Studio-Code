@@ -1,10 +1,46 @@
 {
+	"p:configuration::set": {
+		"prefix": "p:configuration::set",
+		"body": ["Configuration::set('${1:key}', '${2:value}');"],
+		"description": "Store configuration data. This method returns true if the operation is successful, false otherwise. Configuration::set(string $key, mixed $value, ShopConstraint $shopConstraint = null);"
+	},
+
+	"p:configuration::has": {
+		"prefix": "p:configuration::has",
+		"body": ["Configuration::has('${1:key}');"],
+		"description": "Check if a configuration data set exists. Configuration::has(string $key, ShopConstraint $shopConstraint = null);"
+	},
+
+	"p:configuration::get": {
+		"prefix": "p:configuration::get",
+		"body": ["Configuration::get('${1:key}');"],
+		"description": "Retrieve configuration data. Configuration::get(string $key, mixed $default = null);"
+	},
+
+	"p:configuration::remove": {
+		"prefix": "p:configuration::remove",
+		"body": ["Configuration::remove('${1:key}');"],
+		"description": "Delete configuration. This method returns nothing, and throws an Exception on error. Configuration::remove(string $key);"
+	},
+
+	"p:dump": {
+		"prefix": "p:dump",
+		"body": ["var_dump(${0:});"],
+		"description": "var_dump function for PHP"
+	},
+
+	"p:printr": {
+		"prefix": "p:printr",
+		"body": ["print_r(${0:});"],
+		"description": "ptint_r function for PHP"
+	},
+
 	"p:assign": {
 		"prefix": "p:assign",
 		"body": [
 			"\\$this->context->smarty->assign(",
 			"\tarray(",
-			"\t\t'${0:varriable_name}' => \\$$2,$0",
+			"\t\t'${1:varriable_name}' => \\$$2,$0",
 			"\t)",
 			");"
 		],

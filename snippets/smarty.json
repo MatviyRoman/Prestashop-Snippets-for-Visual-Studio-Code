@@ -1,33 +1,51 @@
 {
+	"p:dump": {
+		"prefix": "p:dump",
+		"body": ["{\\$$0|dump}"],
+		"description": "Dump function for Smarty"
+	},
+
+	"p:vdump": {
+		"prefix": "p:vdump",
+		"body": ["{\\$$0|var_dump}"],
+		"description": "var_dump function for Smarty"
+	},
+
+	"p:printr": {
+		"prefix": "p:printr",
+		"body": ["{\\$$0|print_r}"],
+		"description": "print_r function for Smarty"
+	},
+
 	"p:l": {
 		"prefix": "p:l",
-		"body": ["{l s='$0' ${1:mod=''} ${2:d=''}}"],
+		"body": ["{l s='$0' ${1:mod=''} ${2:d='Shop.Theme.Action'}}"],
 		"description": "traduction smarty"
 	},
 
 	"p:l-params": {
 		"prefix": "p:l-params",
 		"body": [
-			"{l s='%d $0' sprintf=[\\$${3:var}|intval] ${1:mod=''} ${2:d=''} }"
+			"{l s='%d $0' sprintf=[\\$${3:var}|intval] ${1:mod=''} ${2:d='Shop.Theme.Action'} }"
 		],
 		"description": "traduction smarty"
 	},
 
 	"Generate token for module or adminController": {
 		"prefix": "p:token",
-		"body": ["Tools::getAdminTokenLite('${0:admin_controller_name}')"],
+		"body": ["{Tools::getAdminTokenLite('${1:admin_controller_name}')}"],
 		"description": "Generate token for module or adminController"
 	},
 
 	"p:link-admin-controller": {
 		"prefix": "p:link-admin-controller",
-		"body": ["{$link->getAdminLink('${0:admin_controller_name}')}"],
+		"body": ["{\\$link->getAdminLink('${1:admin_controller_name}')}"],
 		"description": "Link to admin controller"
 	},
 
 	"p:link-page-1-6": {
 		"prefix": "p:link-page-1.6",
-		"body": ["{$link->getPageLink()}"],
+		"body": ["{\\$link->getPageLink()}"],
 		"description": "Link to page (new-products, specials, my-account etc.) for prestashop 1.6"
 	},
 
@@ -39,27 +57,25 @@
 
 	"p:link-category-1-6": {
 		"prefix": "p:link-category-1.6",
-		"body": ["{$link->getCategoryLink()}"],
+		"body": ["{\\$link->getCategoryLink()}"],
 		"description": "Link to category for prestashop 1.6"
 	},
 
 	"p:link-category-1-7": {
 		"prefix": "p:link-category-1.7",
-		"body": [
-			"{url entity='category' id=${0:id_category} id_lang=${1:i_lang}}"
-		],
+		"body": ["{url entity='category' id=${1:id_category} id_lang=1}"],
 		"description": "Link to category for prestashop 1.7"
 	},
 
 	"p:link-product-1-6": {
 		"prefix": "p:link-product-1.6",
-		"body": ["{$link->getProductLink()}"],
+		"body": ["{\\$link->getProductLink()}"],
 		"description": "Link to product for prestashop 1.6"
 	},
 
 	"p:link-product-1-7": {
 		"prefix": "p:link-product-1.7",
-		"body": ["{url entity='product' id=${0:id_product}}"],
+		"body": ["{url entity='product' id=${1:id_product}}"],
 		"description": "Link to product for prestashop 1.7"
 	},
 
@@ -71,14 +87,14 @@
 
 	"p:link-cms-page-1-7": {
 		"prefix": "p:link-cms-page-1.7",
-		"body": ["{url entity='cms' id=${0:id_page} id_lang=${1:id_lang}}"],
+		"body": ["{url entity='cms' id=${1:id_page} id_lang=1}"],
 		"description": "Link to CMS page for prestashop 1.7"
 	},
 
 	"p:link-module-1-6": {
 		"prefix": "p:link-module-1.6",
 		"body": [
-			"{$link->getModuleLink('${0:module_name}','${1:controller_name}')}"
+			"{\\$link->getModuleLink('${1:module_name}','${2:controller_name}')}"
 		],
 		"description": "Link to module for prestashop 1.6"
 	},
@@ -86,34 +102,34 @@
 	"p:link-module-1-7": {
 		"prefix": "p:link-module-1.7",
 		"body": [
-			"{url entity='module' name='${0:module_name}' controller='${1:module_controller}' params = ['${2:paramKey1}' => $${3:paramValue1}, '${4:paramKey2}' => $${5:paramValue2}]}"
+			"{url entity='module' name='${1:module_name}' controller='${2:module_controller}' params = ['${3:paramKey1}' => $${4:paramValue1}, '${5:paramKey2}' => $${6:paramValue2}]}"
 		],
 		"description": "Link to module for prestashop 1.7"
 	},
 
 	"p:link-image-1-6": {
 		"prefix": "p:link-image-1.6",
-		"body": ["{$link->getCatImageLink()}"],
+		"body": ["{\\$link->getCatImageLink()}"],
 		"description": "Link to image for prestashop 1.7"
 	},
 
 	"p:link-image-1-7": {
 		"prefix": "p:link-image-1.7",
 		"body": [
-			"{url entity='categoryImage' id=${0:id_category} name='${1:image_type}'}"
+			"{url entity='categoryImage' id=${1:id_category} name='${2:image_type}'}"
 		],
 		"description": "Link to image for prestashop 1.7 ImageType: cart_default (125px x 125px) / small_default (98px x 98px) / medium_default (452px x 452px) / home_default (250px x 250px) / large_default (800px x 800px) / category_default (141px x 180px) / stores_default (170px x 115px)"
 	},
 
 	"Call a Prestashop Widget": {
 		"prefix": "p:widget",
-		"body": ["{widget name='${0:module_name}' hook='${1:hook_name}'}"],
+		"body": ["{widget name='${1:module_name}' hook='${2:hook_name}'}"],
 		"description": "Call a Prestashop Widget"
 	},
 
 	"Call a Prestashop Hook": {
 		"prefix": "p:hook",
-		"body": ["{hook h='${0:hook_name}' mod='${1:module_name}'}"],
+		"body": ["{hook h='${1:hook_name}' mod='${2:module_name}'}"],
 		"description": "Call a Prestashop Hook"
 	}
 }

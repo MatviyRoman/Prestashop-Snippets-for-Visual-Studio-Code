@@ -4,6 +4,8 @@ Prestashop snippets for 1.6 and 1.7 versions.
 
 ## Snippets PHP
 
+-  p:dump => var_dump('');
+-  p:printr => print_r('');
 -  p:getval => Tools::getValue('');
 -  p:prefix => Db::getInstance->getPrefix();
 -  p:token => Give a admin token Tools::getAdminTokenLite('<admin_controller_name>');
@@ -15,12 +17,41 @@ Prestashop snippets for 1.6 and 1.7 versions.
 -  p:assign => Give a $this->context->smarty->assign(array());
 -  p:mail_send => Give a complete Mail::send() call
 
+### Configuration storage service
+
+#### Store configuration data
+
+-  p:configuration::set => Configuration::set(string $key, mixed $value, ShopConstraint $shopConstraint = null);
+
+   > This method returns true if the operation is successful, false otherwise.
+
+#### Check if a configuration data set exists
+
+-  p:configuration::has => Configuration::has(string $key, ShopConstraint $shopConstraint = null);
+
+   > This method returns true if the data exists, false otherwise.
+
+#### Retrieve configuration data
+
+-  p:configuration::get => Configuration::get(string $key, mixed $default = null);
+
+   > This method returns the data for $key if it data exists, or NULL otherwise.
+   > <br>
+   > If the data is stored as multi language, this will return an array of values indexed by language id.
+
+#### Delete configuration
+
+-  p:configuration::remove = > Configuration::remove(string $key);
+
+   > This method returns nothing, and throws an Exception on error.
+
 ## Snippets Smarty
 
--  p:l => {l s='' mod='' d=''}
--  p:l => {l s='' sprintf=[$var|intval] mod='<module_name>' d=''}
+-  p:l => {l s='' mod='' d='Shop.Theme.Action'}
+-  p:l => {l s='' sprintf=[$var|intval] mod='<module_name>' d='Shop.Theme.Action'}
 -  p:dump => {$var|dump}
 -  p:vdump => {$var|var_dump}
+-  p:printr => {$var|print_r}
 -  p:hook => {hook h='<hook_name>' mod='<hook_name>'}
 -  p:widget => {widget name='<module_name>' hook='<hook_name>'}
 -  p:token => {Tools::getAdminTokenLite('<admin_controller_name>')}
@@ -54,16 +85,16 @@ Prestashop snippets for 1.6 and 1.7 versions.
 -  p:link-image-1.6 => {$link->getCatImageLink()}
 -  p:link-image-1.7 => {url entity='categoryImage' id=$id_category name='imageType'}
 
-> imageType
-> <br>
+   > imageType
+   > <br>
 
-    1. cart_default (125px x 125px)
-    2. small_default (98px x 98px)
-    3. medium_default (452px x 452px)
-    4. home_default (250px x 250px)
-    5. large_default (800px x 800px)
-    6. category_default (141px x 180px)
-    7. stores_default (170px x 115px)
+        1. cart_default (125px x 125px)
+        2. small_default (98px x 98px)
+        3. medium_default (452px x 452px)
+        4. home_default (250px x 250px)
+        5. large_default (800px x 800px)
+        6. category_default (141px x 180px)
+        7. stores_default (170px x 115px)
 
 ## Snippets CSS,LESS,CSS
 
