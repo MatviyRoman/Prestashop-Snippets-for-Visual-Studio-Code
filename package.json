@@ -4,7 +4,7 @@
 	"author": "Roman Matviy",
 	"displayName": "Prestashop Snippets",
 	"description": "Prestashop Snippets (php, smarty, twig, sql, html, css, scss, sass, less, js, javascript, jquery)",
-	"version": "0.1.8",
+	"version": "0.1.9",
 	"icon": "images/logo.jpg",
 	"repository": "https://github.com/MatviyRoman/Prestashop-Snippets-for-Visual-Studio-Code.git",
 	"engines": {
