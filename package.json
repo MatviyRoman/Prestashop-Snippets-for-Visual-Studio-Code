@@ -28,7 +28,10 @@
 		"js",
 		"javascript",
 		"java script",
-		"jquery"
+		"jquery",
+		"azure",
+		"azure snippets",
+		"azure-snippets"
 	],
 	"categories": [
 		"Azure",
