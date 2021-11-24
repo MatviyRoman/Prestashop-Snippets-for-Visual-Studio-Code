@@ -31,6 +31,12 @@ Prestashop snippets for 1.6 and 1.7 versions.
 
    > This method returns true if the data exists, false otherwise.
 
+#### Update configuration data
+
+-  p:configuration::updateValue => Configuration::updateValue(string $key, mixed $default = null);
+
+   > This method returns the data for $key if it data exists, or NULL otherwise.
+
 #### Retrieve configuration data
 
 -  p:configuration::get => Configuration::get(string $key, mixed $default = null);
@@ -86,7 +92,6 @@ Prestashop snippets for 1.6 and 1.7 versions.
 -  p:link-image-1.7 => {url entity='categoryImage' id=$id_category name='imageType'}
 
    > imageType
-   > <br>
 
         1. cart_default (125px x 125px)
         2. small_default (98px x 98px)
