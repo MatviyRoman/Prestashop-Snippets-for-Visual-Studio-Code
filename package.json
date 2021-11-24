@@ -1,15 +1,23 @@
 {
 	"name": "prestashop-snippets",
 	"publisher": "apartner-top",
-	"author": "Roman Matviy",
+	"author": {
+		"name": "Roman Matviy"
+	},
 	"displayName": "Prestashop Snippets",
 	"description": "Prestashop Snippets (php, smarty, twig, sql, html, css, scss, sass, less, js, javascript, jquery)",
 	"version": "0.1.9",
 	"icon": "images/logo.jpg",
 	"repository": "https://github.com/MatviyRoman/Prestashop-Snippets-for-Visual-Studio-Code.git",
+	"bugs": {
+		"url": "https://github.com/microsoft/vscode-wordcount/issues",
+		"email": "info@apartner.top"
+	},
+	"homepage": "https://apartner.top",
 	"engines": {
 		"vscode": "^1.30.0"
 	},
+	"qna": "marketplace",
 	"keywords": [
 		"Prestashop",
 		"apartner",
