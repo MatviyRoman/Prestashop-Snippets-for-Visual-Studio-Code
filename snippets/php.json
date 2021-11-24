@@ -11,6 +11,12 @@
 		"description": "Check if a configuration data set exists. Configuration::has(string $key, ShopConstraint $shopConstraint = null);"
 	},
 
+	"p:configuration::updateValue": {
+		"prefix": "p:configuration::updateValue",
+		"body": ["Configuration::updateValue('${1:key}','${2:value}');"],
+		"description": "Update configuration data. Configuration::updateValue(string $key, mixed $value);"
+	},
+
 	"p:configuration::get": {
 		"prefix": "p:configuration::get",
 		"body": ["Configuration::get('${1:key}');"],
