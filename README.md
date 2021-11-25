@@ -83,7 +83,7 @@ Prestashop snippets for 1.6 and 1.7 versions.
 
 ### Link to module
 
--  p:link-module-1.6 => {$link->getModuleLink('<module_name>','<controller_name>')}
+-  p:link-module-1.6 => {$link->getModuleLink('<module_name>','<controller_name>','<array_of_params>')}
 -  p:link-module-1.7 => {url entity='module' name='myModule' controller='myController' params = ['paramKey1' => $paramValue1, 'paramKey2' => $paramValue2]}
 
 ### Link to image

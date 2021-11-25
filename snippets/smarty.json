@@ -94,7 +94,7 @@
 	"p:link-module-1-6": {
 		"prefix": "p:link-module-1.6",
 		"body": [
-			"{\\$link->getModuleLink('${1:module_name}','${2:controller_name}')}"
+			"{\\$link->getModuleLink('${1:module_name}','${2:controller_name}',${3:controller_name})}"
 		],
 		"description": "Link to module for prestashop 1.6"
 	},
