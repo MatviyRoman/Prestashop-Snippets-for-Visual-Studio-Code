@@ -93,18 +93,50 @@ Prestashop snippets for 1.6 and 1.7 versions.
 
    > imageType
 
-        1. cart_default (125px x 125px)
-        2. small_default (98px x 98px)
-        3. medium_default (452px x 452px)
-        4. home_default (250px x 250px)
-        5. large_default (800px x 800px)
-        6. category_default (141px x 180px)
-        7. stores_default (170px x 115px)
+        cart_default (125px x 125px)
+        small_default (98px x 98px)
+        medium_default (452px x 452px)
+        home_default (250px x 250px)
+        large_default (800px x 800px)
+        category_default (141px x 180px)
+        stores_default (170px x 115px)
 
 ## Snippets CSS,LESS,CSS
 
--  p:media_phone / p:media_tablet / p:media_desktop => Generate media queries for these devices
+Generate media queries for these devices
+
+-  p:media_phone => Generate Media Query Phone
+
+   ```
+   @media screen and (max-width: 767px) {
+
+   }
+   ```
+
+-  p:media_tablet => Generate Media Query Tablet
+
+   ```
+   @media screen and (min-width: 768px) and (max-width: 991px) {
+
+   }
+   ```
+
+-  p:media_desktop => Generate Media Query Desktop
+
+   ```
+   @media screen and (min-width: 992px) {
+
+   }
+   ```
+
 -  p:flex-center => Display Flex Center attributes
+
+   ```
+   display: flex;
+   justify-content: center;
+   align-items: center;
+
+   ```
 
 <!-- ## Features
 
@@ -170,6 +202,16 @@ Author : [Roman Matviy](https://roman.programist.top)
 Site : [https://matviy.pp.ua](https://matviy.pp.ua)
 <br>
 Source : [https://marketplace.visualstudio.com/items?itemName=apartner-top.prestashop-snippets](https://marketplace.visualstudio.com/items?itemName=apartner-top.prestashop-snippets)
+
+# Donate
+
+<p>Buy me a coffee :)</p>
+<p>QR Code</p>
+<p><a href="https://github.com/MatviyRoman/resass/blob/master/img/qr-code.png?raw=true" target="_blank" rel="noopener noreferrer"><img src="https://github.com/MatviyRoman/resass/raw/master/img/qr-code.png?raw=true" alt="donation resass media queries" style="max-width:100%;"></a></p>
+<p>Or PayPall</p>
+<p><a href="https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&amp;hosted_button_id=E2H8329XLYRKQ&amp;source=url" rel="nofollow"><img src="https://camo.githubusercontent.com/361950b331ef676b7eec436a4dbe5a7ce47211a6623dcc889b1f5b7b611b27df/68747470733a2f2f7777772e70617970616c6f626a656374732e636f6d2f656e5f55532f692f62746e2f62746e5f646f6e61746543435f4c472e676966" alt="Donate" data-canonical-src="https://www.paypalobjects.com/en_US/i/btn/btn_donateCC_LG.gif" style="max-width:100%;"></a></p>
+<p>Thank You!</p>
+<br>
 
 ### For more information
 
