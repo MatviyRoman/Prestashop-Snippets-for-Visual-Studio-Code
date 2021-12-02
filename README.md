@@ -1,6 +1,6 @@
-# Prestashop Snippets README
+# Prestashop Snippets Tools README
 
-Prestashop snippets for 1.6 and 1.7 versions.
+Prestashop snippets tools for 1.6 and 1.7 versions.
 
 ## Snippets PHP
 
@@ -42,7 +42,7 @@ Prestashop snippets for 1.6 and 1.7 versions.
 -  p:configuration::get => Configuration::get(string $key, mixed $default = null);
 
    > This method returns the data for $key if it data exists, or NULL otherwise.
-   > <br>
+   >
    > If the data is stored as multi language, this will return an array of values indexed by language id.
 
 #### Delete configuration
@@ -61,6 +61,20 @@ Prestashop snippets for 1.6 and 1.7 versions.
 -  p:hook => {hook h='<hook_name>' mod='<hook_name>'}
 -  p:widget => {widget name='<module_name>' hook='<hook_name>'}
 -  p:token => {Tools::getAdminTokenLite('<admin_controller_name>')}
+-  p:s.get => {$smarty.get.<get_parammetr>}
+   > display value of page from URL ($\_GET) http://www.example.com/index.php?page=foo
+-  p:s.post => {$smarty.post.<post_parammetr>}
+   > display the variable "page" from a form ($\_POST['page'])
+-  p:s.cookie => {$smarty.cookies.username}
+   > display the value of the cookie "username" ($\_COOKIE['username'])
+-  p:s.server_name => {$smarty.server.SERVER_NAME}
+   > display the server variable "SERVER_NAME" ($\_SERVER['SERVER_NAME'])
+-  p:s.path => {$smarty.env.PATH}
+   > display the system environment variable "PATH"
+-  p:s.session.id => {$smarty.session.id}
+   > display the php session variable "id" ($\_SESSION['id'])
+-  p:s.request.username => {$smarty.request.username}
+   > display the variable "username" from merged get/post/cookies/server/env
 
 ### Link to admin controller
 
@@ -74,12 +88,12 @@ Prestashop snippets for 1.6 and 1.7 versions.
 ### Link to category
 
 -  p:link-category-1.6 => {$link->getCategoryLink()}
--  p:link-category-1.7 => {url entity='category' id=3 id_lang=2}
+-  p:link-category-1.7 => {url entity='category' id=<id_category> id_lang=<id_lang>}
 
 ### Link to product
 
 -  p:link-product-1.6 => {$link->getProductLink()}
--  p:link-product-1.7 => {url entity='product' id=26}
+-  p:link-product-1.7 => {url entity='product' id=<id_product>}
 
 ### Link to module
 
@@ -139,7 +153,6 @@ Generate media queries for these devices
    ```
 
 <!-- ## Features
-
 Describe specific features of your extension including screenshots of your extension in action. Image paths are relative to this README file.
 
 For example if there is an image subfolder under your extension project workspace:
@@ -147,11 +160,8 @@ For example if there is an image subfolder under your extension project workspac
 \!\[feature X\]\(images/feature-x.png\)
 
 > Tip: Many popular extensions utilize animations. This is an excellent way to show off your extension! We recommend short, focused animations that are easy to follow. -->
-
 <!-- ## Requirements
-
 If you have any requirements or dependencies, add a section describing those and how to install and configure them. -->
-
 <!-- ## Extension Settings
 
 Include if your extension adds any VS Code settings through the `contributes.configuration` extension point.
@@ -162,25 +172,15 @@ This extension contributes the following settings:
 
 -  `myExtension.enable`: enable/disable this extension
 -  `myExtension.thing`: set to `blah` to do something -->
-
 <!-- ## Known Issues
-
 Calling out known issues can help limit users opening duplicate issues against your extension. -->
-
 <!-- ## Release Notes
-
 Users appreciate release notes as you update your extension.
-
 ### 0.0.1
-
 Added snippets php, css, and smarty.
-
 ---
-
 ### 0.0.2
-
 Added snippets smarty, html.
-
 ---
 
 -->

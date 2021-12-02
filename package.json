@@ -4,7 +4,7 @@
 	"author": {
 		"name": "Roman Matviy"
 	},
-	"displayName": "Prestashop Snippets",
+	"displayName": "Prestashop Snippets Tools",
 	"description": "Prestashop Snippets (php, smarty, twig, sql, html, css, scss, sass, less, js, javascript, jquery)",
 	"version": "0.2.1",
 	"icon": "images/logo.jpg",
