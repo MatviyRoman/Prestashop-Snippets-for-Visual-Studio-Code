@@ -31,14 +31,14 @@
 
 	"p:dump": {
 		"prefix": "p:dump",
-		"body": ["var_dump(${0:});"],
+		"body": ["var_dump(${0});"],
 		"description": "var_dump function for PHP"
 	},
 
 	"p:printr": {
 		"prefix": "p:printr",
-		"body": ["print_r(${0:});"],
-		"description": "ptint_r function for PHP"
+		"body": ["print_r(${0});"],
+		"description": "print_r function for PHP"
 	},
 
 	"p:assign": {
@@ -46,7 +46,8 @@
 		"body": [
 			"\\$this->context->smarty->assign(",
 			"\tarray(",
-			"\t\t'${1:varriable_name}' => \\$$2,$0",
+			"\t\t'${1:variable_name1}' => \\$$2,$0",
+			"\t\t'${2:variable_name2}' => \\$$2,$0",
 			"\t)",
 			");"
 		],
@@ -119,6 +120,7 @@
 			"\t\t'table'     => 'name_of_table_without_prefix',",
 			"\t\t'primary'   => 'Primary key',",
 			"\t\t'multilang' => false,",
+			"\t\t'multilang_shop' => false,",
 			"\t\t'fields'    => array(",
 			"\t\t\t'${2:'id'}' => array('type' => self::TYPE_INT, 'validate' => 'isInt'),",
 			"\t\t\t'${3:'title'}' => array('type' => self::TYPE_STRING, 'validate' => 'isString'),",
@@ -141,7 +143,7 @@
 			"\texit;",
 			"}",
 			"",
-			"// require_once(_PS_ROOT_DIR_.'/modules/${TM_FILENAME_BASE}/classes/NomDeLaClasse.php');",
+			"// require_once(_PS_ROOT_DIR_.'/modules/${TM_FILENAME_BASE}/classes/NameClass.php');",
 			"",
 			"",
 			"class ${1:MDNomDuModule} extends Module",
