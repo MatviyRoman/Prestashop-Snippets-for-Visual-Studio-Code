@@ -51,7 +51,9 @@
 
 	"p:link-page-1-7": {
 		"prefix": "p:link-page-1.7",
-		"body": ["{url entity='my-account' params=['edited' => 1, 'id' => $id]}"],
+		"body": [
+			"{url entity='${1:my-account}' params=['${2:edited}' => ${3:1}, ${4:'id'} => ${5://$id}]}"
+		],
 		"description": "Link to page (new-products, specials, my-account etc.) for prestashop 1.7"
 	},
 
@@ -63,7 +65,7 @@
 
 	"p:link-category-1-7": {
 		"prefix": "p:link-category-1.7",
-		"body": ["{url entity='category' id=${1:id_category} id_lang=1}"],
+		"body": ["{url entity='category' id=${1:id_category} id_lang=${2:1}}"],
 		"description": "Link to category for prestashop 1.7"
 	},
 
@@ -81,7 +83,7 @@
 
 	"p:link-cms-page-1-6": {
 		"prefix": "p:link-cms-page-1.6",
-		"body": ["{$link->getCmsLink()}"],
+		"body": ["{\\$link->getCmsLink()}"],
 		"description": "Link to CMS page for prestashop 1.6"
 	},
 
@@ -139,35 +141,35 @@
 		"description": "display value of page from URL ($_GET) http://www.example.com/index.php?page=foo"
 	},
 
-	"display the variable \"page\" from a form ($_POST['page'])": {
+	"display the variable 'page' from a form ($_POST['page'])": {
 		"prefix": "p:s.post",
-		"body": ["{\\$smarty.post.${1:post_parammetr}}"],
-		"description": "display the variable \"page\" from a form ($_POST['page'])"
+		"body": ["{\\$smarty.post.${1:post_param}}"],
+		"description": "display the variable 'page' from a form ($_POST['page'])"
 	},
 
-	"display the value of the cookie \"username\" ($_COOKIE['username'])": {
+	"display the value of the cookie 'username' ($_COOKIE['username'])": {
 		"prefix": "p:s.cookies",
 		"body": ["{\\$smarty.cookies.username}"],
-		"description": "display the value of the cookie \"username\" ($_COOKIE['username'])"
+		"description": "display the value of the cookie 'username' ($_COOKIE['username'])"
 	},
-	"display the server variable \"SERVER_NAME\" ($_SERVER['SERVER_NAME'])": {
+	"display the server variable 'SERVER_NAME' ($_SERVER['SERVER_NAME'])": {
 		"prefix": "p:s.server_name",
 		"body": ["{\\$smarty.server.SERVER_NAME}"],
-		"description": "display the server variable \"SERVER_NAME\" ($_SERVER['SERVER_NAME'])"
+		"description": "display the server variable 'SERVER_NAME' ($_SERVER['SERVER_NAME'])"
 	},
-	"display the system environment variable \"PATH\"": {
+	"display the system environment variable 'PATH'": {
 		"prefix": "p:s.path",
 		"body": ["{\\$smarty.env.PATH}"],
-		"description": "display the system environment variable \"PATH\""
+		"description": "display the system environment variable 'PATH'"
 	},
-	"display the php session variable \"id\" ($_SESSION['id'])": {
+	"display the php session variable 'id' ($_SESSION['id'])": {
 		"prefix": "p:s.session.id",
 		"body": ["{\\$smarty.session.id}"],
-		"description": "display the php session variable \"id\" ($_SESSION['id'])"
+		"description": "display the php session variable 'id' ($_SESSION['id'])"
 	},
-	"display the variable \"username\" from merged get/post/cookies/server/env": {
+	"display the variable 'username' from merged get/post/cookies/server/env": {
 		"prefix": "p:s.request.username",
 		"body": ["{\\$smarty.request.username}"],
-		"description": "display the variable \"username\" from merged get/post/cookies/server/env"
+		"description": "display the variable 'username' from merged get/post/cookies/server/env"
 	}
 }

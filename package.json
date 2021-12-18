@@ -6,8 +6,12 @@
 	},
 	"displayName": "Prestashop Snippets Tools",
 	"description": "Prestashop Snippets (php, smarty, twig, sql, html, css, scss, sass, less, js, javascript, jquery)",
-	"version": "0.2.2",
+	"version": "0.2.3",
 	"icon": "images/logo.jpg",
+	"galleryBanner": {
+		"color": "#2c2c32",
+		"theme": "dark"
+	},
 	"repository": "https://github.com/MatviyRoman/Prestashop-Snippets-for-Visual-Studio-Code.git",
 	"bugs": {
 		"url": "https://github.com/MatviyRoman/Prestashop-Snippets-for-Visual-Studio-Code/issues",
