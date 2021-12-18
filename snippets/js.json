@@ -1,6 +1,6 @@
 {
 	"For Loop": {
-		"prefix": "for",
+		"prefix": "p:for",
 		"body": [
 			"for (var ${index} = 0; ${index} < ${array}.length; ${index}++) {",
 			"\tvar ${element} = ${array}[${index}];",
