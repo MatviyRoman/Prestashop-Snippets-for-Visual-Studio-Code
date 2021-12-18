@@ -2,7 +2,8 @@
 
 Prestashop snippets tools for 1.6 and 1.7 versions.
 
-## Snippets PHP
+<details>
+<summary>Snippets PHP</summary>
 
 -   p:dump => var_dump('');
 -   p:printr => print_r('');
@@ -49,9 +50,12 @@ Prestashop snippets tools for 1.6 and 1.7 versions.
 
 -   p:configuration::remove = > Configuration::remove(string $key);
 
-    > This method returns nothing, and throws an Exception on error.
+        > This method returns nothing, and throws an Exception on error.
 
-## Snippets Smarty
+</details>
+
+<details>
+<summary>Snippets Smarty</summary>
 
 -   p:l => {l s='' mod='' d='Shop.Theme.Action'}
 -   p:l => {l s='' sprintf=[$var|intval] mod='<module_name>' d='Shop.Theme.Action'}
@@ -105,17 +109,20 @@ Prestashop snippets tools for 1.6 and 1.7 versions.
 -   p:link-image-1.6 => {$link->getCatImageLink()}
 -   p:link-image-1.7 => {url entity='categoryImage' id=$id_category name='imageType'}
 
-    > imageType
+        > imageType
 
-         cart_default (125px x 125px)
-         small_default (98px x 98px)
-         medium_default (452px x 452px)
-         home_default (250px x 250px)
-         large_default (800px x 800px)
-         category_default (141px x 180px)
-         stores_default (170px x 115px)
+             cart_default (125px x 125px)
+             small_default (98px x 98px)
+             medium_default (452px x 452px)
+             home_default (250px x 250px)
+             large_default (800px x 800px)
+             category_default (141px x 180px)
+             stores_default (170px x 115px)
 
-## Snippets SCSS, SASS, LESS, CSS
+</details>
+
+<details>
+<summary>Snippets SCSS, SASS, LESS, CSS</summary>
 
 Generate media queries for these devices
 
@@ -145,12 +152,28 @@ Generate media queries for these devices
 
 -   p:flex-center => Display Flex Center attributes
 
-    ```
-    display: flex;
-    justify-content: center;
-    align-items: center;
+        ```
+        display: flex;
+        justify-content: center;
+        align-items: center;
 
-    ```
+        ```
+
+</details>
+
+<details>
+<summary>Snippets JS</summary>
+
+-   p:for => For Loop
+
+        ```
+         for (var index = 0; index < array.length; index++) {
+            var element = array[index];
+
+        }
+        ```
+
+    </details>
 
 <!-- ## Features
 Describe specific features of your extension including screenshots of your extension in action. Image paths are relative to this README file.
