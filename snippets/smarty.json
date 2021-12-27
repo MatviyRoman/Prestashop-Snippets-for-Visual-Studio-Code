@@ -137,7 +137,7 @@
 
 	"display value of page from URL ($_GET) http://www.example.com/index.php?page=foo": {
 		"prefix": "p:s.get",
-		"body": ["{\\$smarty.get.${1:get_parammetr}}"],
+		"body": ["{\\$smarty.get.${1:get_param}}"],
 		"description": "display value of page from URL ($_GET) http://www.example.com/index.php?page=foo"
 	},
 

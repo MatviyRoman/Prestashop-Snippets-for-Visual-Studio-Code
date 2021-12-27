@@ -7,6 +7,9 @@
 	"displayName": "Prestashop Snippets Tools",
 	"description": "Prestashop Snippets (php, smarty, twig, sql, html, css, scss, sass, less, js, javascript, jquery)",
 	"version": "0.2.5",
+	"engines": {
+		"vscode": "^1.30.0"
+	},
 	"icon": "images/logo.jpg",
 	"galleryBanner": {
 		"color": "#2c2c32",
@@ -18,12 +21,11 @@
 		"email": "info@apartner.top"
 	},
 	"homepage": "https://apartner.top",
-	"engines": {
-		"vscode": "^1.30.0"
-	},
 	"qna": "marketplace",
 	"keywords": [
 		"Prestashop",
+		"Prestashop snippets",
+		"Prestashop templates",
 		"apartner",
 		"programist",
 		"apartner.top",
@@ -43,7 +45,9 @@
 		"jquery",
 		"azure",
 		"azure snippets",
-		"azure-snippets"
+		"azure-snippets",
+		"PHPStorm",
+		"Live Templates"
 	],
 	"categories": [
 		"Azure",

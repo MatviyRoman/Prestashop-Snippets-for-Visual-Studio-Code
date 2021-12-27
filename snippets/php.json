@@ -226,5 +226,88 @@
 			");"
 		],
 		"description": "Generate a Mail::send"
+	},
+
+	"_c": {
+		"prefix": "_c",
+		"body": [
+			"public function __construct($${1:parameters})",
+			"{",
+			"\t$0",
+			"}"
+		],
+		"description": "Constructor"
+	},
+	"eco": {
+		"prefix": "eco",
+		"body": ["echo \"$0\";"],
+		"description": "'echo' statement"
+	},
+	"fore": {
+		"prefix": "fore",
+		"body": ["foreach ($1 as $${2:item}) {", "\t$0", "}"],
+		"description": "foreach(iterable_expr as $value) {...}"
+	},
+	"forek": {
+		"prefix": "forek",
+		"body": ["foreach ($1 as $${2:key} => $${3:index}) {", "\t$0", "}"],
+		"description": "foreach(iterable_expr as $key => $value) {...}"
+	},
+	"inc": {
+		"prefix": "inc",
+		"body": ["include \"$0\";"],
+		"description": "'include' statement"
+	},
+	"inco": {
+		"prefix": "inco",
+		"body": ["include_once \"$0\";"],
+		"description": "'include_once' statement"
+	},
+	"prif": {
+		"prefix": "prif",
+		"body": ["private function $1($2)", "{", "\t$0", "}"],
+		"description": "private function"
+	},
+	"prisf": {
+		"prefix": "prisf",
+		"body": ["private static function $1($2)", "{", "\t$0", "}"],
+		"description": "private static function"
+	},
+	"prof": {
+		"prefix": "prof",
+		"body": ["protected function $1($2)", "{", "\t$0", "}"],
+		"description": "protected function"
+	},
+	"prosf": {
+		"prefix": "prosf",
+		"body": ["protected static function $1($2)", "{", "\t$0", "}"],
+		"description": "protected static function"
+	},
+	"pubf": {
+		"prefix": "pubf",
+		"body": ["public function $1($2)", "{", "\t$0", "}"],
+		"description": "public function"
+	},
+	"pubsf": {
+		"prefix": "pubsf",
+		"body": ["public static function $1($2)", "{", "\t$0", "}"],
+		"description": "public static function"
+	},
+	"rqr": {
+		"prefix": "rqr",
+		"body": ["require \"$0\";"],
+		"description": "'require' statement"
+	},
+	"rqro": {
+		"prefix": "rqro",
+		"body": ["require_once \"$0\";"],
+		"description": "'require_once' statement"
+	},
+	"thr": {
+		"prefix": "thr",
+		"body": [
+			"throw new ${1:\\Exception}(\"${2:Error Processing Request}\");"
+		],
+		"description": "throw new"
 	}
 }

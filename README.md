@@ -1,6 +1,9 @@
 # Prestashop Snippets Tools README
 
 Prestashop snippets tools for 1.6 and 1.7 versions.
+This extension will help you faster to make common using snippets.
+
+Support `tab` to previous/next slug.
 
 <details>
 <summary>Snippets PHP</summary>
@@ -50,7 +53,31 @@ Prestashop snippets tools for 1.6 and 1.7 versions.
 
 -   p:configuration::remove = > Configuration::remove(string $key);
 
-        > This method returns nothing, and throws an Exception on error.
+    > This method returns nothing, and throws an Exception on error.
+
+<!-- Support `tab` to previous/next slug. -->
+
+### Functions with PHPStorm
+
+-   As you can see, I add new functions , references by PHPStorm.
+
+| shortcut | function                      |
+| -------- | ----------------------------- |
+| \_c      | build construct method        |
+| eco      | echo                          |
+| fore     | foreach                       |
+| forek    | foreach with key              |
+| inc      | include                       |
+| inco     | include_once                  |
+| prif     | build private method          |
+| prisf    | build private static method   |
+| prof     | build protected method        |
+| prosf    | build protected static method |
+| pubf     | build public method           |
+| pubsf    | build public static method    |
+| rqr      | require                       |
+| rqro     | require_once                  |
+| thr      | throw new...                  |
 
 </details>
 
@@ -152,12 +179,11 @@ Generate media queries for these devices
 
 -   p:flex-center => Display Flex Center attributes
 
-        ```
-        display: flex;
-        justify-content: center;
-        align-items: center;
-
-        ```
+    ```
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    ```
 
 </details>
 
@@ -173,7 +199,7 @@ Generate media queries for these devices
         }
         ```
 
-    </details>
+</details>
 
 <!-- ## Features
 Describe specific features of your extension including screenshots of your extension in action. Image paths are relative to this README file.
