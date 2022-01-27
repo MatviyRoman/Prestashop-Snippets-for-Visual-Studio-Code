@@ -86,6 +86,18 @@
 		"description": "Prestashop DB Query"
 	},
 
+	"p:sqlexecute": {
+		"prefix": "p:sqlexecute",
+		"body": ["Db::getInstance()->execute(\\$sql$0);"],
+		"description": "Prestashop DB execute function"
+	},
+
+	"p:sqlexecuteS": {
+		"prefix": "p:sqlexecuteS",
+		"body": ["Db::getInstance()->executeS(\\$sql$0);"],
+		"description": "Prestashop DB executeS function"
+	},
+
 	"p:sqlrow": {
 		"prefix": "p:sqlrow",
 		"body": ["Db::getInstance()->getRow($0);"],
@@ -96,6 +108,90 @@
 		"prefix": "p:sqlval",
 		"body": ["Db::getInstance()->getValue($0);"],
 		"description": "Prestashop DB getValue function"
+	},
+
+	"Allows to display the text without HTML tags and slashes": {
+		"prefix": "p:clean",
+		"body": ["Tools::getDescriptionClean(\\$text);", ""],
+		"description": "Allows to display the text without HTML tags and slashes"
+	},
+
+	"Get user browser": {
+		"prefix": "p:userBrowser",
+		"body": ["Tools::getUserBrowser();", ""],
+		"description": "Get user browser"
+	},
+
+	"Get user platform": {
+		"prefix": "p:userPlatform",
+		"body": ["Tools::getUserPlatform();", ""],
+		"description": "Get user platform"
+	},
+
+	"Bool value": {
+		"prefix": "p:boolVal",
+		"body": ["Tools::boolVal(\\$value);", ""],
+		"description": "Bool Value"
+	},
+
+	"Identify the version of php": {
+		"prefix": "p:phpVer",
+		"body": ["Tools::checkPhpVersion();", ""],
+		"description": "Identify the version of php"
+	},
+
+	"Converts SomethingLikeThis to something-like-this": {
+		"prefix": "p:camelCaseToKebabCase",
+		"body": ["Tools::camelCaseToKebabCase(\\$text);", ""],
+		"description": "Converts SomethingLikeThis to something-like-this"
+	},
+
+	"Transform a CamelCase string to underscore_case string": {
+		"prefix": "p:toUnderscoreCase",
+		"body": ["Tools::toUnderscoreCase(\\$text);", ""],
+		"description": "Transform a CamelCase string to underscore_case string"
+	},
+
+	"Translates a string with underscores into camel case (e.g. first_name -> firstName)": {
+		"prefix": "p:toCamelCase",
+		"body": ["Tools::toCamelCase(\\$text);", ""],
+		"description": "Translates a string with underscores into camel case (e.g. first_name -> firstName)"
+	},
+
+	"Function simplexml_load_file()": {
+		"prefix": "p:simplexml_load_file",
+		"body": ["Tools::simplexml_load_file(\\$url);", ""],
+		"description": "Translates a string with underscores into camel case (e.g. first_name -> firstName)"
+	},
+
+	"Checks if a key exists either in $_POST or $_GET": {
+		"prefix": "p:getIsset",
+		"body": ["Tools::getIsset(\\$key);", ""],
+		"description": "Checks if a key exists either in $_POST or $_GET"
+	},
+
+	"Get all values from $_POST/$_GET": {
+		"prefix": "p:getAllValues",
+		"body": ["Tools::getAllValues();", ""],
+		"description": "Get all values from $_POST/$_GET"
+	},
+
+	"Redirect user to another page (using header Location)": {
+		"prefix": "p:redirectAdmin",
+		"body": ["Tools::redirectAdmin(\\$url);", ""],
+		"description": "Redirect user to another page (using header Location)"
+	},
+
+	"Redirect URLs already containing PS_BASE_URI": {
+		"prefix": "p:redirectLink",
+		"body": ["Tools::redirectLink(\\$url);", ""],
+		"description": "Redirect URLs already containing PS_BASE_URI"
+	},
+
+	"Redirect user to another page": {
+		"prefix": "p:redirect",
+		"body": ["Tools::redirect(\\$url);", ""],
+		"description": "Redirect user to another page"
 	},
 
 	"p:class": {

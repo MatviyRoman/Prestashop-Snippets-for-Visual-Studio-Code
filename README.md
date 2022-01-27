@@ -1,6 +1,6 @@
 # Prestashop Snippets Tools README
 
-Prestashop snippets tools for 1.6 and 1.7 versions.
+Prestashop snippets tools for 1.6 and 1.7 versions.<br>
 This extension will help you faster to make common using snippets.
 
 Support `tab` to previous/next slug.
@@ -10,12 +10,28 @@ Support `tab` to previous/next slug.
 
 -   p:dump => var_dump('');
 -   p:printr => print_r('');
+-   p:getIsset => Checks if a key exists either in $\_POST or $\_GET Tools::getIsset('');
 -   p:getval => Tools::getValue('');
+-   p:getAllValues => Get all values from $_POST/$\_GET. Tools::getAllValues();
+-   p:redirectAdmin => Redirect user to another page (using header Location) Tools::redirectAdmin($url);
+-   p:redirectLink => Redirect URLs already containing PS_BASE_URI Tools::redirectLink($url);
+-   p:redirect => Redirect user to another page Tools::redirect($url);
 -   p:prefix => Db::getInstance->getPrefix();
 -   p:token => Give a admin token Tools::getAdminTokenLite('<admin_controller_name>');
 -   p:psquery => Show an instance of DBQuery
+-   p:sqlexecute => Prestashop DB execute function
+-   p:sqlexecuteS => Prestashop DB executeS function
 -   p:sqlrow => Give a Db::getInstance()->getRow($sql);
 -   p:sqlval => Give a Db::getInstance()->getValue($sql);
+-   p:clean => Allows to display the text without HTML tags and slashes
+-   p:userBrowser => Get user browser
+-   p:userPlatform => Get user platform
+-   p:boolVal => Bool Value
+-   p:phpVer => Identify the version of php
+-   p:camelCaseToKebabCase => Converts SomethingLikeThis to something-like-this
+-   p:toUnderscoreCase => Converts SomethingLikeThis to something-like-this
+-   p:toCamelCase => Translates a string with underscores into camel case (e.g. first_name -> firstName)
+-   p:simplexml_load_file => Function simplexml_load_file()
 -   p:class => Create a Prestashop object model sample !
 -   p:module => Create a Prestashop Module sample !
 -   p:assign => Give a $this->context->smarty->assign(array());
@@ -78,6 +94,8 @@ Support `tab` to previous/next slug.
 | rqr      | require                       |
 | rqro     | require_once                  |
 | thr      | throw new...                  |
+
+<br>
 
 </details>
 
