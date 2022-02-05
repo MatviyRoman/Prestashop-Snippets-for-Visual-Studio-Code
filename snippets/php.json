@@ -1,4 +1,54 @@
 {
+	"__LINE__": {
+		"prefix": "_l",
+		"body": ["__LINE__"],
+		"description": "The current line number of the file."
+	},
+
+	"__FILE__": {
+		"prefix": "_f",
+		"body": ["__FILE__"],
+		"description": "The full path and filename of the file with symlinks resolved. If used inside an include, the name of the included file is returned."
+	},
+	"__DIR__": {
+		"prefix": "_d",
+		"body": ["__DIR__"],
+		"description": "The directory of the file. If used inside an include, the directory of the included file is returned. This is equivalent to dirname(__FILE__). This directory name does not have a trailing slash unless it is the root directory."
+	},
+
+	"__FUNCTION__": {
+		"prefix": "_fun",
+		"body": ["__FUNCTION__"],
+		"description": "The function name, or {closure} for anonymous functions."
+	},
+
+	"__CLASS__": {
+		"prefix": "_cl",
+		"body": ["__CLASS__"],
+		"description": "The class name. The class name includes the namespace it was declared in (e.g. FooBar). When used in a trait method, __CLASS__ is the name of the class the trait is used in.nonymous functions."
+	},
+
+	"__TRAIT__": {
+		"prefix": "_t",
+		"body": ["__TRAIT__"],
+		"description": "The trait name. The trait name includes the namespace it was declared in (e.g. FooBar)."
+	},
+	"__METHOD__": {
+		"prefix": "_m",
+		"body": ["__METHOD__"],
+		"description": "The class method name."
+	},
+	"_n": {
+		"prefix": "_n",
+		"body": ["__NAMESPACE__"],
+		"description": "The name of the current namespace."
+	},
+	"_cn": {
+		"prefix": "_cn",
+		"body": ["ClassName::class"],
+		"description": "The fully qualified class name."
+	},
+
 	"p:configuration::set": {
 		"prefix": "p:configuration::set",
 		"body": ["Configuration::set('${1:key}', '${2:value}');"],
