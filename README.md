@@ -97,6 +97,20 @@ Support `tab` to previous/next slug.
 
 <br>
 
+### Magic constants
+
+| shortcut | constant          |
+| -------- | ----------------- |
+| \_l      | \_\_LINE\_\_      |
+| \_f      | \_\_FILE\_\_      |
+| \_d      | \_\_DIR\_\_       |
+| \_fun    | \_\_FUNCTION\_\_  |
+| \_cl     | \_\_CLASS\_\_     |
+| \_t      | \_\_TRAIT\_\_     |
+| \_m      | \_\_METHOD\_\_    |
+| \_n      | \_\_NAMESPACE\_\_ |
+| \_cn     | ClassName::class  |
+
 </details>
 
 <details>
