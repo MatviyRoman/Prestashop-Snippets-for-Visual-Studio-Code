@@ -237,6 +237,12 @@ Generate media queries for these devices
         console.log();
         ```
 
+-   clg => Print to console
+
+        ```
+        console.log();
+        ```
+
 </details>
 
 <!-- ## Features
