@@ -231,6 +231,12 @@ Generate media queries for these devices
         }
         ```
 
+-   log => Print to console
+
+        ```
+        console.log();
+        ```
+
 </details>
 
 <!-- ## Features
