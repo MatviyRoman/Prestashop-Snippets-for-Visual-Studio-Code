@@ -230,8 +230,8 @@ Generate media queries for these devices
 <details>
 <summary>Snippets JS</summary>
 
--   p:ajaxFront => jQuery Ajax Call Your Front Controller
--   p:ajaxAdmin => jQuery Ajax Call Your Admin Controller
+-   p:ajaxFrontController => jQuery Ajax Call Your Front Controller
+-   p:ajaxAdminController => jQuery Ajax Call Your Admin Controller
 
 -   p:for => For Loop
 -   for => For Loop
