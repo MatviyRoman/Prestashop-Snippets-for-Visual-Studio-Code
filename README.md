@@ -1,3 +1,7 @@
+<a href="https://war.ukraine.ua"><img src="images/russia-invaded-Ukraine.png" alt="russia invaded Ukraine"></a>
+
+#
+
 # Prestashop Snippets Tools README
 
 Prestashop snippets tools for 1.6 and 1.7 versions.<br>
@@ -8,6 +12,9 @@ Support `tab` to previous/next slug.
 <details>
 <summary>Snippets PHP</summary>
 
+-   p:ajaxMethod => Ajax Call Your Method
+-   p:ajaxAdminController => Ajax Call Your Admin Controller Code
+-   p:ajaxFrontController => Ajax Call Your Front Controller Code
 -   p:dump => var_dump('');
 -   p:printr => print_r('');
 -   p:getIsset => Checks if a key exists either in $\_POST or $\_GET Tools::getIsset('');
@@ -222,7 +229,12 @@ Generate media queries for these devices
 <details>
 <summary>Snippets JS</summary>
 
+-   p:ajaxFront => jQuery Ajax Call Your Front Controller
+-   p:ajaxAdmin => jQuery Ajax Call Your Admin Controller
+
 -   p:for => For Loop
+-   for => For Loop
+-   loop => For Loop
 
         ```
          for (var index = 0; index < array.length; index++) {
@@ -231,13 +243,9 @@ Generate media queries for these devices
         }
         ```
 
--   log => Print to console
-
-        ```
-        console.log();
-        ```
-
+-   p:log => Print to console
 -   clg => Print to console
+-   log => Print to console
 
         ```
         console.log();
