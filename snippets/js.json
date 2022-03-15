@@ -51,15 +51,15 @@
 	},
 
 	"jQuery Ajax Call Your Front Controller": {
-		"prefix": "p:ajaxFront",
+		"prefix": "p:ajaxFrontController",
 		"body": [
 			"$.ajax( {",
-			"\ttype    : '${1:'POST'}',",
-			"\tdataType: 'JSON'",
-			"\turl     : '${2:'yourFrontController.php'}',",
+			"\ttype    : ${1:'POST'},",
+			"\tdataType: 'JSON',",
+			"\turl     : ${2:'yourFrontController.php'},",
 			"\tdata    : {",
 			"\t\tajax   : ${3:'true'},",
-			"\t\taction : '${4:'doSomeAction'}',",
+			"\t\taction : ${4:'doSomeAction'},",
 			"\t\t${5:'variable_1'} : ${5:'var1'},",
 			"\t\t${6:'variable_2'} : ${6:'var2'},",
 			"\t},",
@@ -85,15 +85,15 @@
 	},
 
 	"jQuery Ajax Call Your Admin Controller": {
-		"prefix": "p:ajaxAdmin",
+		"prefix": "p:ajaxAdminController",
 		"body": [
 			"$.ajax( {",
-			"\ttype    : '${1:'POST'}',",
-			"\tdataType: 'JSON'",
-			"\turl     : '${2:'yourAdminController.php'}',",
+			"\ttype    : ${1:'POST'},",
+			"\tdataType: 'JSON',",
+			"\turl     : ${2:'yourAdminController.php'},",
 			"\tdata    : {",
 			"\t\tajax   : ${3:'true'},",
-			"\t\taction : '${4:'doSomeAction'}',",
+			"\t\taction : ${4:'doSomeAction'},",
 			"\t\t${5:'variable_1'} : ${5:'var1'},",
 			"\t\t${6:'variable_2'} : ${6:'var2'},",
 			"\t},",
