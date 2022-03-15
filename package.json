@@ -6,7 +6,7 @@
 	},
 	"displayName": "Prestashop Snippets Tools",
 	"description": "Prestashop Snippets (php, smarty, twig, sql, html, css, scss, sass, less, js, javascript, jquery)",
-	"version": "0.3.0",
+	"version": "0.3.1",
 	"engines": {
 		"vscode": "^1.30.0"
 	},
