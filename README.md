@@ -1,5 +1,5 @@
 <a href="https://bank.gov.ua/en/news/all/natsionalniy-bank-vidkriv-spetsrahunok-dlya-zboru-koshtiv-na-potrebi-armiyi"><img src="images/support-Ukraine1.png" alt="support Ukraine"></a>
-<a href="https://war.ukraine.ua" style="display: none"><img src="images/russia-invaded-Ukraine.png" alt="russia invaded Ukraine"></a>
+<a href="https://war.ukraine.ua" style="display: none"><img width="0" height="0" src="images/russia-invaded-Ukraine.png" alt="russia invaded Ukraine"></a>
 
 #
 
