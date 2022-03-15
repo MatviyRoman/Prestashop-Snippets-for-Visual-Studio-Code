@@ -485,7 +485,15 @@
 			"    }",
 			"",
 			"    return parent::run();",
-			"}"
+			"}",
+
+			"//In Prestashop, we can follow this processor same in our front controller as well.",
+
+			"//Here, only different is displayAjax and ajaxProcess.",
+
+			"//In Admin Controller – we need to prefix “ajaxProcesss” with our action ",
+			"//function which we have passed in our ajax call , while getting ajax call.",
+			"//In front controller – we need to prefix “displayAjax” with our action function which we have passed in our ajax call, while getting ajax call."
 		],
 		"description": "Ajax Call Your Method"
 	},
@@ -569,7 +577,15 @@
 			"",
 			"        return parent::run();",
 			"    }",
-			"}"
+			"}",
+
+			"//In Prestashop, we can follow this processor same in our front controller as well.",
+
+			"//Here, only different is displayAjax and ajaxProcess.",
+
+			"//In Admin Controller – we need to prefix “ajaxProcesss” with our action ",
+			"//function which we have passed in our ajax call , while getting ajax call.",
+			"//In front controller – we need to prefix “displayAjax” with our action function which we have passed in our ajax call, while getting ajax call."
 		],
 		"description": "Ajax Call Your Admin Controller Code"
 	},
@@ -657,7 +673,15 @@
 			"",
 			"        return parent::run();",
 			"    }",
-			"}"
+			"}",
+
+			"//In Prestashop, we can follow this processor same in our front controller as well.",
+
+			"//Here, only different is displayAjax and ajaxProcess.",
+
+			"//In Admin Controller – we need to prefix “ajaxProcesss” with our action ",
+			"//function which we have passed in our ajax call , while getting ajax call.",
+			"//In front controller – we need to prefix “displayAjax” with our action function which we have passed in our ajax call, while getting ajax call."
 		],
 		"description": "Ajax Call Your Front Controller Code"
 	}
