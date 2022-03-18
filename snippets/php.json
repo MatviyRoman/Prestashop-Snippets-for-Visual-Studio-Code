@@ -49,36 +49,6 @@
 		"description": "The fully qualified class name."
 	},
 
-	"p:configuration::set": {
-		"prefix": "p:configuration::set",
-		"body": ["Configuration::set('${1:key}', '${2:value}');"],
-		"description": "Store configuration data. This method returns true if the operation is successful, false otherwise. Configuration::set(string $key, mixed $value, ShopConstraint $shopConstraint = null);"
-	},
-
-	"p:configuration::has": {
-		"prefix": "p:configuration::has",
-		"body": ["Configuration::has('${1:key}');"],
-		"description": "Check if a configuration data set exists. Configuration::has(string $key, ShopConstraint $shopConstraint = null);"
-	},
-
-	"p:configuration::updateValue": {
-		"prefix": "p:configuration::updateValue",
-		"body": ["Configuration::updateValue('${1:key}','${2:value}');"],
-		"description": "Update configuration data. Configuration::updateValue(string $key, mixed $value);"
-	},
-
-	"p:configuration::get": {
-		"prefix": "p:configuration::get",
-		"body": ["Configuration::get('${1:key}');"],
-		"description": "Retrieve configuration data. Configuration::get(string $key, mixed $default = null);"
-	},
-
-	"p:configuration::remove": {
-		"prefix": "p:configuration::remove",
-		"body": ["Configuration::remove('${1:key}');"],
-		"description": "Delete configuration. This method returns nothing, and throws an Exception on error. Configuration::remove(string $key);"
-	},
-
 	"p:dump": {
 		"prefix": "p:dump",
 		"body": ["var_dump(${0});"],
@@ -110,54 +80,10 @@
 		"description": "Get value from $_GET or $_POST Tools::getValue()"
 	},
 
-	"p:prefix": {
-		"prefix": "p:prefix",
-		"body": ["Db::getInstance->getPrefix();"],
-		"description": "Db::getInstance->getPrefix()"
-	},
-
 	"Generate token for module or adminController": {
 		"prefix": "p:token",
 		"body": ["Tools::getAdminTokenLite('${0:admin_controller_name}');"],
 		"description": "Generate token for module or adminController"
-	},
-
-	"p:psquery": {
-		"prefix": "p:psquery",
-		"body": [
-			"\\$sql = new DbQuery();",
-			"\\$sql->select('*');",
-			"\\$sql->from('cms', 'c');",
-			"\\$sql->innerJoin('cms_lang', 'l', 'c.id_cms = l.id_cms AND l.id_lang = '.(int)\\$id_lang);",
-			"\\$sql->where('c.active = 1');",
-			"\\$sql->orderBy('position');",
-			"return Db::getInstance()->executeS(\\$sql);"
-		],
-		"description": "Prestashop DB Query"
-	},
-
-	"p:sqlexecute": {
-		"prefix": "p:sqlexecute",
-		"body": ["Db::getInstance()->execute(\\$sql$0);"],
-		"description": "Prestashop DB execute function"
-	},
-
-	"p:sqlexecuteS": {
-		"prefix": "p:sqlexecuteS",
-		"body": ["Db::getInstance()->executeS(\\$sql$0);"],
-		"description": "Prestashop DB executeS function"
-	},
-
-	"p:sqlrow": {
-		"prefix": "p:sqlrow",
-		"body": ["Db::getInstance()->getRow($0);"],
-		"description": "Prestashop DB getRow function"
-	},
-
-	"p:sqlval": {
-		"prefix": "p:sqlval",
-		"body": ["Db::getInstance()->getValue($0);"],
-		"description": "Prestashop DB getValue function"
 	},
 
 	"Allows to display the text without HTML tags and slashes": {
@@ -211,7 +137,7 @@
 	"Function simplexml_load_file()": {
 		"prefix": "p:simplexml_load_file",
 		"body": ["Tools::simplexml_load_file(\\$url);", ""],
-		"description": "Translates a string with underscores into camel case (e.g. first_name -> firstName)"
+		"description": "Function simplexml_load_file()"
 	},
 
 	"Checks if a key exists either in $_POST or $_GET": {
@@ -501,8 +427,6 @@
 	"Ajax Call Your Admin Controller Code": {
 		"prefix": "p:ajaxAdminController",
 		"body": [
-			"<?php",
-			"",
 			"/**",
 			"* 2022 aPartner.Top AND programist.top",
 			"*",
@@ -593,8 +517,6 @@
 	"Ajax Call Your Front Controller Code": {
 		"prefix": "p:ajaxFrontController",
 		"body": [
-			"<?php",
-			"",
 			"/**",
 			"* 2022 aPartner.Top AND programist.top",
 			"*",
@@ -684,5 +606,191 @@
 			"//In front controller – we need to prefix “displayAjax” with our action function which we have passed in our ajax call, while getting ajax call."
 		],
 		"description": "Ajax Call Your Front Controller Code"
+	},
+
+	//SQL PHP START
+
+	"SQL DB": {
+		"prefix": "p:sqlDb",
+		"body": ["//$db = Db::getInstance();"],
+		"description": "SQL DB"
+	},
+
+	"SQL DB 1": {
+		"prefix": "p:sqlDb1",
+		"body": ["//$db = Db::getInstance(_PS_USE_SQL_SLAVE_);"],
+		"description": "SQL DB1"
+	},
+
+	"p:prefix": {
+		"prefix": "p:prefix",
+		"body": ["_DB_PREFIX_"],
+		"description": "Get Data base prefix _DB_PREFIX_"
+	},
+
+	"p:prefix1": {
+		"prefix": "p:prefix1",
+		"body": ["Db::getInstance->getPrefix();"],
+		"description": "Get Data base prefix Db::getInstance->getPrefix();"
+	},
+
+	"p:sqlQuery": {
+		"prefix": "p:sqlQuery",
+		"body": [
+			"\\$sql = new DbQuery();",
+			"\\$sql->select('*');",
+			"\\$sql->from('cms', 'c');",
+			"\\$sql->innerJoin('cms_lang', 'l', 'c.id_cms = l.id_cms AND l.id_lang = '.(int)\\$id_lang);",
+			"\\$sql->where('c.active = 1');",
+			"\\$sql->orderBy('position');",
+			"return Db::getInstance()->executeS(\\$sql);"
+		],
+		"description": "Prestashop DB Query"
+	},
+
+	"p:sqlExecute": {
+		"prefix": "p:sqlExecute",
+		"body": ["Db::getInstance()->execute(\\$sql$0);"],
+		"description": "Prestashop DB execute function"
+	},
+
+	"p:sqlExecuteS": {
+		"prefix": "p:sqlExecuteS",
+		"body": ["Db::getInstance()->executeS(\\$sql$0);"],
+		"description": "Prestashop DB executeS function"
+	},
+
+	"p:sqlRow": {
+		"prefix": "p:sqlRow",
+		"body": ["Db::getInstance()->getRow(\\$sql$0);"],
+		"description": "Prestashop DB getRow function"
+	},
+
+	"p:sqlVal": {
+		"prefix": "p:sqlVal",
+		"body": ["Db::getInstance()->getValue(\\$sql$0);"],
+		"description": "Prestashop DB getValue function"
+	},
+
+	"SQL prestashop delete DELETE FROM `prefix_target_table` WHERE myField = 15 LIMIT 1": {
+		"prefix": "p:sqlDelete",
+		"body": [
+			"Db::getInstance()->delete('target_table', 'myField = 15', 1); //15 = id //1 = LIMIT"
+		],
+		"description": "SQL prestashop delete DELETE FROM `prefix_target_table` WHERE myField = 15 LIMIT 1"
+	},
+
+	"SQL delete": {
+		"prefix": "p:sqlDelete1",
+		"body": [
+			"//$sql = 'DELETE FROM '._DB_PREFIX_.'table_name WHERE condition';",
+			"echo //$sql;",
+			"Db::getInstance()->execute(\\$sql);"
+		],
+		"description": "SQL delete"
+	},
+
+	"SQL prestashop insert into": {
+		"prefix": "p:sqlInsert",
+		"body": [
+			"",
+			"//$target = Tools::getValue('id');",
+			"//$name = Tools::getValue('name');",
+			"Db::getInstance()->insert('target_table', array(",
+			"    'id_target' => (int)//$target,",
+			"    'name'      => pSQL(//$name),",
+			"));"
+		],
+		"description": "SQL prestashop insert into"
+	},
+
+	"SQL insert into 1": {
+		"prefix": "p:sqlInsert1",
+		"body": [
+			"\\$sql ='INSERT INTO '._DB_PREFIX_.'table_name (column1, column2, column3)",
+			"VALUES (value1, value2, value3)';",
+			"echo \\$sql;",
+			"Db::getInstance()->execute(\\$sql);"
+		],
+		"description": "SQL insert into 1"
+	},
+
+	"SQL insert into 2": {
+		"prefix": "p:sqlInsert2",
+		"body": [
+			"\\$sql ='INSERT INTO '._DB_PREFIX_.'table_name",
+			"VALUES (value1, value2, value3)';",
+			"echo \\$sql;",
+			"Db::getInstance()->execute(\\$sql);"
+		],
+		"description": "SQL insert into 2"
+	},
+
+	"SQL update": {
+		"prefix": "p:sqlUpdate",
+		"body": [
+			"\\$sql ='UPDATE '._DB_PREFIX_.'table_name",
+			"SET column1 = value1, column2 = value2, column3 = value3",
+			"WHERE condition;';",
+			"echo \\$sql;",
+			"Db::getInstance()->execute(\\$sql);"
+		],
+		"description": "SQL update"
+	},
+
+	"SQL returns the ID created during the latest INSERT query": {
+		"prefix": "p:sqlGetLastId",
+		"body": ["Db::getInstance()->Insert_ID();"],
+		"description": "SQL returns the ID created during the latest INSERT query"
+	},
+
+	"SQL returns the number of lines impacted by the latest UPDATE or DELETE query": {
+		"prefix": "p:sqlAffectedRows",
+		"body": ["Db::getInstance()->Affected_Rows();"],
+		"description": "SQL returns the number of lines impacted by the latest UPDATE or DELETE query"
+	},
+
+	"SQL returns the latest error message, if the query has failed": {
+		"prefix": "p:sqlGetMsgError",
+		"body": ["Db::getInstance()->getMsgError();"],
+		"description": "SQL returns the latest error message, if the query has failed"
+	},
+
+	"SQL returns the latest error number, if the query has failed": {
+		"prefix": "p:sqlGetNumberError",
+		"body": ["Db::getInstance()->getNumberError();"],
+		"description": "SQL returns the latest error number, if the query has failed"
+	},
+
+	"p:configuration::set": {
+		"prefix": "p:configuration::set",
+		"body": ["Configuration::set('${1:key}', '${2:value}');"],
+		"description": "Store configuration data. This method returns true if the operation is successful, false otherwise. Configuration::set(string $key, mixed $value, ShopConstraint $shopConstraint = null);"
+	},
+
+	"p:configuration::has": {
+		"prefix": "p:configuration::has",
+		"body": ["Configuration::has('${1:key}');"],
+		"description": "Check if a configuration data set exists. Configuration::has(string $key, ShopConstraint $shopConstraint = null);"
+	},
+
+	"p:configuration::updateValue": {
+		"prefix": "p:configuration::updateValue",
+		"body": ["Configuration::updateValue('${1:key}','${2:value}');"],
+		"description": "Update configuration data. Configuration::updateValue(string $key, mixed $value);"
+	},
+
+	"p:configuration::get": {
+		"prefix": "p:configuration::get",
+		"body": ["Configuration::get('${1:key}');"],
+		"description": "Retrieve configuration data. Configuration::get(string $key, mixed $default = null);"
+	},
+
+	"p:configuration::remove": {
+		"prefix": "p:configuration::remove",
+		"body": ["Configuration::remove('${1:key}');"],
+		"description": "Delete configuration. This method returns nothing, and throws an Exception on error. Configuration::remove(string $key);"
 	}
+
+	//SQL PHP END
 }

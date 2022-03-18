@@ -24,13 +24,7 @@ Support `tab` to previous/next slug.
 -   p:redirectAdmin => Redirect user to another page (using header Location) Tools::redirectAdmin($url);
 -   p:redirectLink => Redirect URLs already containing PS_BASE_URI Tools::redirectLink($url);
 -   p:redirect => Redirect user to another page Tools::redirect($url);
--   p:prefix => Db::getInstance->getPrefix();
 -   p:token => Give a admin token Tools::getAdminTokenLite('<admin_controller_name>');
--   p:psquery => Show an instance of DBQuery
--   p:sqlexecute => Prestashop DB execute function
--   p:sqlexecuteS => Prestashop DB executeS function
--   p:sqlrow => Give a Db::getInstance()->getRow($sql);
--   p:sqlval => Give a Db::getInstance()->getValue($sql);
 -   p:clean => Allows to display the text without HTML tags and slashes
 -   p:userBrowser => Get user browser
 -   p:userPlatform => Get user platform
@@ -44,40 +38,6 @@ Support `tab` to previous/next slug.
 -   p:module => Create a Prestashop Module sample !
 -   p:assign => Give a $this->context->smarty->assign(array());
 -   p:mail_send => Give a complete Mail::send() call
-
-### Configuration storage service
-
-#### Store configuration data
-
--   p:configuration::set => Configuration::set(string $key, mixed $value, ShopConstraint $shopConstraint = null);
-
-    > This method returns true if the operation is successful, false otherwise.
-
-#### Check if a configuration data set exists
-
--   p:configuration::has => Configuration::has(string $key, ShopConstraint $shopConstraint = null);
-
-    > This method returns true if the data exists, false otherwise.
-
-#### Update configuration data
-
--   p:configuration::updateValue => Configuration::updateValue(string $key, mixed $default = null);
-
-    > This method returns the data for $key if it data exists, or NULL otherwise.
-
-#### Retrieve configuration data
-
--   p:configuration::get => Configuration::get(string $key, mixed $default = null);
-
-    > This method returns the data for $key if it data exists, or NULL otherwise.
-    >
-    > If the data is stored as multi language, this will return an array of values indexed by language id.
-
-#### Delete configuration
-
--   p:configuration::remove = > Configuration::remove(string $key);
-
-    > This method returns nothing, and throws an Exception on error.
 
 <!-- Support `tab` to previous/next slug. -->
 
@@ -118,6 +78,65 @@ Support `tab` to previous/next slug.
 | \_m      | \_\_METHOD\_\_    |
 | \_n      | \_\_NAMESPACE\_\_ |
 | \_cn     | ClassName::class  |
+
+</details>
+
+<details>
+<summary>Snippets SQL in PHP</summary>
+
+-   p:sqlDb => $db = Db::getInstance();
+-   p:sqlDb1 => $db = Db::getInstance(_PS_USE_SQL_SLAVE_);
+-   p:prefix => Get Data base prefix _DB_PREFIX_
+-   p:prefix1 => Get Data base prefix Db::getInstance->getPrefix();
+-   p:sqlQuery => Show an instance of DBQuery
+-   p:sqlExecute => Prestashop DB execute function
+-   p:sqlExecuteS => Prestashop DB executeS function
+-   p:sqlRow => Give a Db::getInstance()->getRow($sql);
+-   p:sqlVal => Give a Db::getInstance()->getValue($sql);
+-   p:sqlInsert => SQL prestashop insert into
+-   p:sqlInsert1 => SQL insert into 1
+-   p:sqlInsert2 => SQL insert into 2
+-   p:sqlUpdate => SQL update
+-   p:sqlDelete => SQL prestashop delete
+-   p:sqlDelete1 => SQL delete
+-   p:sqlGetLastId => SQL returns the ID created during the latest INSERT query
+-   p:sqlAffectedRows => SQL returns the number of lines impacted by the latest UPDATE or DELETE query
+-   p:sqlGetMsgError => SQL returns the latest error message, if the query has failed
+-   p:sqlGetNumberError => SQL returns the latest error number, if the query has failed
+
+### Configuration storage service
+
+#### Store configuration data
+
+-   p:configuration::set => Configuration::set(string $key, mixed $value, ShopConstraint $shopConstraint = null);
+
+    > This method returns true if the operation is successful, false otherwise.
+
+#### Check if a configuration data set exists
+
+-   p:configuration::has => Configuration::has(string $key, ShopConstraint $shopConstraint = null);
+
+    > This method returns true if the data exists, false otherwise.
+
+#### Update configuration data
+
+-   p:configuration::updateValue => Configuration::updateValue(string $key, mixed $default = null);
+
+    > This method returns the data for $key if it data exists, or NULL otherwise.
+
+#### Retrieve configuration data
+
+-   p:configuration::get => Configuration::get(string $key, mixed $default = null);
+
+    > This method returns the data for $key if it data exists, or NULL otherwise.
+    >
+    > If the data is stored as multi language, this will return an array of values indexed by language id.
+
+#### Delete configuration
+
+-   p:configuration::remove = > Configuration::remove(string $key);
+
+    > This method returns nothing, and throws an Exception on error.
 
 </details>
 
