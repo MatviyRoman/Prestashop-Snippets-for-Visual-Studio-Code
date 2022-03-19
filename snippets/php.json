@@ -466,8 +466,8 @@
 			"    {",
 			"        header('Content-Type: application/json; charset=utf-8');",
 			"",
-			"        \\$${2:var1} = Tools::getValue('{3:variable_1}');",
-			"        \\$${4:var2} = Tools::getValue('{5:variable_2}');",
+			"        \\$${2:var1} = Tools::getValue('\\${3:variable_1}');",
+			"        \\$${4:var2} = Tools::getValue('\\${5:variable_2}');",
 			"",
 			"        // your action code ....",
 			"",
@@ -560,8 +560,8 @@
 			"    {",
 			"        header('Content-Type: application/json; charset=utf-8');",
 			"",
-			"        \\$${2:var1} = Tools::getValue('{3:variable_1}');",
-			"        \\$${4:var2} = Tools::getValue('{5:variable_2}');",
+			"        \\$${2:var1} = Tools::getValue('\\${3:variable_1}');",
+			"        \\$${4:var2} = Tools::getValue('\\${5:variable_2}');",
 			"",
 			"        // your action code ....",
 			"",
@@ -612,13 +612,13 @@
 
 	"SQL DB": {
 		"prefix": "p:sqlDb",
-		"body": ["//$db = Db::getInstance();"],
+		"body": ["\\$db = Db::getInstance();"],
 		"description": "SQL DB"
 	},
 
 	"SQL DB 1": {
 		"prefix": "p:sqlDb1",
-		"body": ["//$db = Db::getInstance(_PS_USE_SQL_SLAVE_);"],
+		"body": ["\\$db = Db::getInstance(_PS_USE_SQL_SLAVE_);"],
 		"description": "SQL DB1"
 	},
 
@@ -683,8 +683,8 @@
 	"SQL delete": {
 		"prefix": "p:sqlDelete1",
 		"body": [
-			"//$sql = 'DELETE FROM '._DB_PREFIX_.'table_name WHERE condition';",
-			"echo //$sql;",
+			"\\$sql = 'DELETE FROM '._DB_PREFIX_.'table_name WHERE condition';",
+			"echo \\$sql;",
 			"Db::getInstance()->execute(\\$sql);"
 		],
 		"description": "SQL delete"
@@ -694,11 +694,11 @@
 		"prefix": "p:sqlInsert",
 		"body": [
 			"",
-			"//$target = Tools::getValue('id');",
-			"//$name = Tools::getValue('name');",
+			"\\$target = Tools::getValue('id');",
+			"\\$name = Tools::getValue('name');",
 			"Db::getInstance()->insert('target_table', array(",
-			"    'id_target' => (int)//$target,",
-			"    'name'      => pSQL(//$name),",
+			"    'id_target' => (int)\\$target,",
+			"    'name'      => pSQL(\\$name),",
 			"));"
 		],
 		"description": "SQL prestashop insert into"
@@ -762,6 +762,31 @@
 		"description": "SQL returns the latest error number, if the query has failed"
 	},
 
+	"SQL escape. Security Note that none of the above methods escape the query itself. You will have to do that using either pSQL() or bqSQL().  pSQL() is an alias for Db::getInstance()->escape($string, $htmlOK);It accepts a string that will be sanitized by the function. If your string contains HTML-code, be sure to pass the argument $htmlOK = true as well.  bqSQL() can also be used. Note that besides escaping the ` character, it also calls pSQL() afterwards, but without the option to sanitize HTML.": {
+		"prefix": "p:sqlEscape",
+		"body": [
+			"",
+			"/**",
+			" * Sanitize data which will be injected into SQL query",
+			" *",
+			" * @param string $string SQL data which will be injected into SQL query",
+			" * @param bool $htmlOK Does data contain HTML code ? (optional)",
+			" * @return string Sanitized data",
+			" */",
+			"Db::getInstance()->escape(\\$${2:string}, \\$${3:htmlOK});",
+			""
+		],
+		"description": "SQL escape. Security Note that none of the above methods escape the query itself. You will have to do that using either pSQL() or bqSQL().  pSQL() is an alias for Db::getInstance()->escape($string, $htmlOK);It accepts a string that will be sanitized by the function. If your string contains HTML-code, be sure to pass the argument $htmlOK = true as well.  bqSQL() can also be used. Note that besides escaping the ` character, it also calls pSQL() afterwards, but without the option to sanitize HTML."
+	},
+	"SQL Get the number of rows in a result. This method caches and returns the number of rows from the last result set.  Be careful, if your request has a limit, the method numRows() is limited too. If you need to retrieve the number of rows without limits, you need to use SELECT COUNT(*).": {
+		"prefix": "p:sqlNumRows",
+		"body": ["Db::getInstance()->numRows();"],
+		"description": "SQL Get the number of rows in a result. This method caches and returns the number of rows from the last result set.  Be careful, if your request has a limit, the method numRows() is limited too. If you need to retrieve the number of rows without limits, you need to use SELECT COUNT(*)."
+	},
+
+	//SQL PHP END
+
+	//SQL PHP Configuration Start
 	"p:configuration::set": {
 		"prefix": "p:configuration::set",
 		"body": ["Configuration::set('${1:key}', '${2:value}');"],
@@ -792,5 +817,5 @@
 		"description": "Delete configuration. This method returns nothing, and throws an Exception on error. Configuration::remove(string $key);"
 	}
 
-	//SQL PHP END
+	//SQL PHP Configuration End
 }
