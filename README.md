@@ -1,4 +1,4 @@
-<a href="https://bank.gov.ua/en/news/all/natsionalniy-bank-vidkriv-spetsrahunok-dlya-zboru-koshtiv-na-potrebi-armiyi"><img src="images/support-Ukraine1.png" alt="support Ukraine"></a>
+<a href="https://bank.gov.ua/en/news/all/natsionalniy-bank-vidkriv-spetsrahunok-dlya-zboru-koshtiv-na-potrebi-armiyi"><img src="images/support-Ukraine.png" alt="support Ukraine"></a>
 <a href="https://war.ukraine.ua" style="display: none"><img width="0" height="0" src="images/russia-invaded-Ukraine.png" alt="russia invaded Ukraine"></a>
 
 #
@@ -103,6 +103,8 @@ Support `tab` to previous/next slug.
 -   p:sqlAffectedRows => SQL returns the number of lines impacted by the latest UPDATE or DELETE query
 -   p:sqlGetMsgError => SQL returns the latest error message, if the query has failed
 -   p:sqlGetNumberError => SQL returns the latest error number, if the query has failed
+-   p:sqlEscape => SQL Sanitize data which will be injected into SQL query
+-   p:sqlNumRows => SQL Get the number of rows in a result
 
 ### Configuration storage service
 
