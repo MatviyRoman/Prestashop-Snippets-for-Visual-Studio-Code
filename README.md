@@ -1,5 +1,5 @@
-<a href="https://bank.gov.ua/en/news/all/natsionalniy-bank-vidkriv-spetsrahunok-dlya-zboru-koshtiv-na-potrebi-armiyi"><img src="images/support-Ukraine.png" alt="support Ukraine"></a>
-<a href="https://war.ukraine.ua" style="display: none"><img width="0" height="0" src="images/russia-invaded-Ukraine.png" alt="russia invaded Ukraine"></a>
+<a href="https://war.ukraine.ua"><img style="max-width: 1920px; width: 100%;" src="images/war.png" alt="russia invaded Ukraine"></a><br>
+<a href="https://bank.gov.ua/en/news/all/natsionalniy-bank-vidkriv-spetsrahunok-dlya-zboru-koshtiv-na-potrebi-armiyi"><img style="max-width: 1920px; width: 100%;" src="images/support-Ukraine.png" alt="support Ukraine"></a>
 
 #
 
@@ -7,6 +7,8 @@
 
 Prestashop snippets tools for 1.6 and 1.7 versions.<br>
 This extension will help you faster to make common using snippets.
+
+PHP snippets to help you be more productive when developing in PHP
 
 Support `tab` to previous/next slug.
 
@@ -39,13 +41,11 @@ Support `tab` to previous/next slug.
 -   p:assign => Give a $this->context->smarty->assign(array());
 -   p:mail_send => Give a complete Mail::send() call
 
-<!-- Support `tab` to previous/next slug. -->
-
 ### Functions with PHPStorm
 
 -   As you can see, I add new functions , references by PHPStorm.
 
-| shortcut | function                      |
+| Shortcut | Function                      |
 | -------- | ----------------------------- |
 | \_c      | build construct method        |
 | eco      | echo                          |
@@ -65,9 +65,32 @@ Support `tab` to previous/next slug.
 
 <br>
 
+### php snippets
+
+| Shortcut | Output                         |
+| -------- | ------------------------------ |
+| `$_`     | `$_COOKIE['...']`              |
+| `$_`     | `$_ENV['...']`                 |
+| `$_`     | `$_FILES['...']`               |
+| `$_`     | `$_GET['...']`                 |
+| `$_`     | `$_POST['...']`                |
+| `$_`     | `$_REQUEST['...']`             |
+| `$_`     | `$_SERVER['...']`              |
+| `$_`     | `$_SESSION['...']`             |
+| `r`      | `return;`                      |
+| `dd`     | `dd(...)`                      |
+| `trt`    | `trait ... {`                  |
+| `?=`     | `<?= ... ?>`                   |
+| `c`      | `class ... {`                  |
+| `cc`     | `class ... {` _w/ constructor_ |
+
+_As much as possible I try and make the ... be where your cursor ends up._
+
+<br>
+
 ### Magic constants
 
-| shortcut | constant          |
+| Shortcut | Constant          |
 | -------- | ----------------- |
 | \_l      | \_\_LINE\_\_      |
 | \_f      | \_\_FILE\_\_      |
@@ -346,5 +369,19 @@ Source : [https://marketplace.visualstudio.com/items?itemName=apartner-top.prest
 
 <!-- -  [Visual Studio Code's Markdown Support](http://code.visualstudio.com/docs/languages/markdown)
 -  [Markdown Syntax Reference](https://help.github.com/articles/markdown-basics/) -->
+
+## Note
+
+<!-- ### **This is a major work in progress that...*I've just started.* ** -->
+
+If you have a snippet that you use a lot submit a pull-request!
+
+An issue would also be an easy way to suggest a snippet to be added.
+
+Just add the code that you'd want to be turned in to a snippet and I'll see if I can't get it added.
+
+## Known issues
+
+I've not found a way to start a snippet with the leading less than symbol (`<...`). VS Code also seems to use the opening PHP tag to define it's context insead of the selector in the bottom right of the window (or the extension). So far I've not been able to add a snippet that would twig out an entire script yet.
 
 **Enjoy!**

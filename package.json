@@ -26,6 +26,12 @@
 		"Prestashop",
 		"Prestashop snippets",
 		"Prestashop templates",
+		"Prestashop php",
+		"Prestashop smarty",
+		"Prestashop javascript",
+		"Prestashop css/sass/scss/less",
+		"Prestashop short code",
+		"short code",
 		"apartner",
 		"programist",
 		"apartner.top",
@@ -92,10 +98,6 @@
 			},
 			{
 				"language": "javascript",
-				"path": "./snippets/js.json"
-			},
-			{
-				"language": "js",
 				"path": "./snippets/js.json"
 			}
 		]
