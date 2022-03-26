@@ -1,4 +1,20 @@
 {
+	/*
+        // Place your snippets for PHP here. Each snippet is defined under a snippet name and has a prefix, body and
+        // description. The prefix is what is used to trigger the snippet and the body will be expanded and inserted. Possible variables are:
+        // $1, $2 for tab stops, $0 for the final cursor position, and ${1:label}, ${2:another} for placeholders. Placeholders with the
+        // same ids are connected.
+        // Example:
+        "Print to console": {
+            "prefix": "log",
+            "body": [
+                "console.log('$1');",
+                "$2"
+            ],
+            "description": "Log output to console"
+        }
+    */
+
 	"__LINE__": {
 		"prefix": "_l",
 		"body": ["__LINE__"],
@@ -383,6 +399,97 @@
 		"description": "throw new"
 	},
 
+	//php snippets start
+	"PHP: COOKIE['...']": {
+		"prefix": "$_",
+		"body": ["$$_COOKIE['$1']"],
+		"description": "PHP Cookie"
+	},
+	"PHP: ENV['...']": {
+		"prefix": "$_",
+		"body": ["$$_ENV['$1']"],
+		"description": "PHP env"
+	},
+	"PHP: FILES['...']": {
+		"prefix": "$_",
+		"body": ["$$_FILES['$1']"],
+		"description": "PHP Files"
+	},
+	"PHP: GET['...']": {
+		"prefix": "$_",
+		"body": ["$$_GET['$1']"],
+		"description": "PHP Get"
+	},
+	"PHP: POST['...']": {
+		"prefix": "$_",
+		"body": ["$$_POST['$1']"],
+		"description": "PHP Post"
+	},
+	"PHP: REQUEST['...']": {
+		"prefix": "$_",
+		"body": ["$$_REQUEST['$1']"],
+		"description": "PHP Request"
+	},
+	"PHP: SERVER['...']": {
+		"prefix": "$_",
+		"body": ["$$_SERVER['$1']"],
+		"description": "PHP Server"
+	},
+	"PHP: SESSION['...']": {
+		"prefix": "$_",
+		"body": ["$$_SESSION['$1']"],
+		"description": "PHP Session"
+	},
+	"PHP: return;": {
+		"prefix": "r",
+		"body": ["return$1;"],
+		"desription": "PHP blank return statement"
+	},
+	"PHP: Short echo tag ": {
+		"prefix": "?=",
+		"body": ["<?= $1 ?>"],
+		"description": "PHP short echo tag"
+	},
+	"PHP: Class declaration": {
+		"prefix": "c",
+		"body": ["class $1 {", "     $2", "}"],
+		"description": "PHP class declaration"
+	},
+	"PHP: Class w/ constructor": {
+		"prefix": "cc",
+		"body": [
+			"class $1 {",
+			"     public function __construct()",
+			"     {",
+			"         $2",
+			"     }",
+			"}"
+		],
+		"description": "PHP class w/ constructor"
+	},
+	"PHP: trait ... {": {
+		"prefix": "trt",
+		"body": [
+			"namespace $1;",
+			"",
+			"use $2;",
+			"",
+			"trait $3Trait {",
+			"    $4",
+			"}"
+		]
+	},
+	"Laravel: dd(...)": {
+		"prefix": "dd",
+		"body": ["dd($1);"],
+		"description": "Laravel die & dump"
+	},
+	"PHP Public Function: public function ...(...)": {
+		"prefix": "pfunc",
+		"body": ["public function $1($2)", "{", "\t$3", "}"]
+	},
+	//php snippets end
+
 	"Ajax Call Your PHP Method": {
 		"prefix": "p:ajaxMethod",
 		"body": [
@@ -405,7 +512,7 @@
 			"}",
 			"public function run()",
 			"{",
-			"    if (mb_strtolower(Tools::getValue('action')) == mb_strtolower('doSomeAction') {",
+			"    if (mb_strtolower(Tools::getValue('action') == mb_strtolower('doSomeAction')) {",
 			"        FrontController::init();",
 			"        \\$this->displayAjaxDoSomeAction();",
 			"    }",
