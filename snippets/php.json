@@ -71,6 +71,12 @@
 		"description": "dump function of PrestaShop"
 	},
 
+	"p:vdump": {
+		"prefix": "p:vdump",
+		"body": ["var_dump(${0});"],
+		"description": "var_dump function for PHP"
+	},
+
 	"p:printr": {
 		"prefix": "p:printr",
 		"body": ["print_r(${0});"],
