@@ -399,7 +399,7 @@
 		"description": "throw new"
 	},
 
-	//php snippets start
+	//! php snippets
 	"PHP: COOKIE['...']": {
 		"prefix": "$_",
 		"body": ["$$_COOKIE['$1']"],
@@ -488,8 +488,8 @@
 		"prefix": "pfunc",
 		"body": ["public function $1($2)", "{", "\t$3", "}"]
 	},
-	//php snippets end
 
+	//! php ajax
 	"Ajax Call Your PHP Method": {
 		"prefix": "p:ajaxMethod",
 		"body": [
@@ -715,8 +715,7 @@
 		"description": "Ajax Call Your Front Controller Code"
 	},
 
-	//SQL PHP START
-
+	//! SQL PHP
 	"SQL DB": {
 		"prefix": "p:sqlDb",
 		"body": ["\\$db = Db::getInstance();"],
@@ -891,9 +890,7 @@
 		"description": "SQL Get the number of rows in a result. This method caches and returns the number of rows from the last result set.  Be careful, if your request has a limit, the method numRows() is limited too. If you need to retrieve the number of rows without limits, you need to use SELECT COUNT(*)."
 	},
 
-	//SQL PHP END
-
-	//SQL PHP Configuration Start
+	//! SQL PHP Configuration
 	"p:configuration::set": {
 		"prefix": "p:configuration::set",
 		"body": ["Configuration::set('${1:key}', '${2:value}');"],
@@ -923,6 +920,4 @@
 		"body": ["Configuration::remove('${1:key}');"],
 		"description": "Delete configuration. This method returns nothing, and throws an Exception on error. Configuration::remove(string $key);"
 	}
-
-	//SQL PHP Configuration End
 }
