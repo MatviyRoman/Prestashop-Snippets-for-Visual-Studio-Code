@@ -55,8 +55,8 @@
 	"Basic jQuery.each()": {
 		"prefix": "p:eachBasic",
 		"body": [
-			"\t$('${element}').each(function(index, value){",
-			"\t\tconsole.log(this.text());",
+			"$('${element}').each(function(index, value){",
+			"\tconsole.log(this.text());",
 			"});"
 		],
 		"description": "Basic jQuery.each()"
@@ -84,7 +84,7 @@
 			"",
 			"$.each(colors, function() {",
 			"\t$.each(this, function(name, value) {",
-			"\t\tconsole.log(`${name} = ${value}`);",
+			"\t\tconsole.log(name +' = '+ value);",
 			"\t});",
 			"});"
 		],
