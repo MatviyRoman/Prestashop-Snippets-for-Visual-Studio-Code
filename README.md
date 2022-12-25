@@ -1,5 +1,5 @@
-`<a href="https://war.ukraine.ua"><img style="max-width: 1920px; width: 100%;" src="images/war.png" alt="russia invaded Ukraine">``</a><br>`
-`<a href="https://bank.gov.ua/en/news/all/natsionalniy-bank-vidkriv-spetsrahunok-dlya-zboru-koshtiv-na-potrebi-armiyi"><img style="max-width: 1920px; width: 100%;" src="images/support-Ukraine.png" alt="support Ukraine">``</a>`
+<a href="https://war.ukraine.ua"><img style="height: auto; max-width: 1920px; width: 100%;" src="images/war.png" alt="russia invaded Ukraine"></a><br>
+<a href="https://bank.gov.ua/en/news/all/natsionalniy-bank-vidkriv-spetsrahunok-dlya-zboru-koshtiv-na-potrebi-armiyi"><img style="height: auto; max-width: 1920px; width: 100%;" src="images/support-Ukraine.png" alt="support Ukraine"></a>
 
 # Prestashop Snippets Tools README
 
@@ -13,37 +13,37 @@ Support `tab` to previous/next slug.
 <details>
 <summary>Snippets PHP</summary>
 
-- p:ajaxMethod => Ajax Call Your Method
-- p:ajaxAdminController => Ajax Call Your Admin Controller Code
-- p:ajaxFrontController => Ajax Call Your Front Controller Code
-- p:dump => dump('');
-- p:vdump => var_dump('');
-- p:printr => print_r('');
-- p:getIsset => Checks if a key exists either in $\_POST or $\_GET Tools::getIsset('');
-- p:getval => Tools::getValue('');
-- p:getAllValues => Get all values from $_POST/$\_GET. Tools::getAllValues();
-- p:redirectAdmin => Redirect user to another page (using header Location) Tools::redirectAdmin($url);
-- p:redirectLink => Redirect URLs already containing PS_BASE_URI Tools::redirectLink($url);
-- p:redirect => Redirect user to another page Tools::redirect($url);
-- p:token => Give a admin token Tools::getAdminTokenLite('<admin_controller_name>');
-- p:clean => Allows to display the text without HTML tags and slashes
-- p:userBrowser => Get user browser
-- p:userPlatform => Get user platform
-- p:boolVal => Bool Value
-- p:phpVer => Identify the version of php
-- p:camelCaseToKebabCase => Converts SomethingLikeThis to something-like-this
-- p:toUnderscoreCase => Converts SomethingLikeThis to something-like-this
-- p:toCamelCase => Translates a string with underscores into camel case (e.g. first_name -> firstName)
-- p:simplexml_load_file => Function simplexml_load_file()
-- p:class => Create a Prestashop object model sample !
-- p:module => Create a Prestashop Module sample !
-- p:assign => Give a $this->context->smarty->assign(array());
-- p:mail_send => Give a complete Mail::send() call
-- 
+-   p:ajaxMethod => Ajax Call Your Method
+-   p:ajaxAdminController => Ajax Call Your Admin Controller Code
+-   p:ajaxFrontController => Ajax Call Your Front Controller Code
+-   p:dump => dump('');
+-   p:vdump => var_dump('');
+-   p:printr => print_r('');
+-   p:getIsset => Checks if a key exists either in $\_POST or $\_GET Tools::getIsset('');
+-   p:getval => Tools::getValue('');
+-   p:getAllValues => Get all values from $_POST/$\_GET. Tools::getAllValues();
+-   p:redirectAdmin => Redirect user to another page (using header Location) Tools::redirectAdmin($url);
+-   p:redirectLink => Redirect URLs already containing PS_BASE_URI Tools::redirectLink($url);
+-   p:redirect => Redirect user to another page Tools::redirect($url);
+-   p:token => Give a admin token Tools::getAdminTokenLite('<admin_controller_name>');
+-   p:clean => Allows to display the text without HTML tags and slashes
+-   p:userBrowser => Get user browser
+-   p:userPlatform => Get user platform
+-   p:boolVal => Bool Value
+-   p:phpVer => Identify the version of php
+-   p:camelCaseToKebabCase => Converts SomethingLikeThis to something-like-this
+-   p:toUnderscoreCase => Converts SomethingLikeThis to something-like-this
+-   p:toCamelCase => Translates a string with underscores into camel case (e.g. first_name -> firstName)
+-   p:simplexml_load_file => Function simplexml_load_file()
+-   p:class => Create a Prestashop object model sample !
+-   p:module => Create a Prestashop Module sample !
+-   p:assign => Give a $this->context->smarty->assign(array());
+-   p:mail_send => Give a complete Mail::send() call
+-
 
 ### Functions with PHPStorm
 
-- As you can see, I add new functions , references by PHPStorm.
+-   As you can see, I add new functions , references by PHPStorm.
 
 | Shortcut | Function                      |
 | -------- | ----------------------------- |
@@ -67,22 +67,22 @@ Support `tab` to previous/next slug.
 
 ### php snippets
 
-| Shortcut                          | Output                             |  |  |  |  |
-| --------------------------------- | ---------------------------------- | - | - | - | - |
-| `$_`     | `$_COOKIE['...']`  |                                    |  |  |  |  |
-| `$_`     | `$_ENV['...']`     |                                    |  |  |  |  |
-| `$_`     | `$_FILES['...']`   |                                    |  |  |  |  |
-| `$_`     | `$_GET['...']`     |                                    |  |  |  |  |
-| `$_`     | `$_POST['...']`    |                                    |  |  |  |  |
-| `$_`     | `$_REQUEST['...']` |                                    |  |  |  |  |
-| `$_`     | `$_SERVER['...']`  |                                    |  |  |  |  |
-| `$_`     | `$_SESSION['...']` |                                    |  |  |  |  |
-| `r`                             | `return;`                        |  |  |  |  |
-| `dd`                            | `dd(...)`                        |  |  |  |  |
-| `trt`                           | `trait ... {`                    |  |  |  |  |
-| `?=`                            | `<?= ... ?>`                     |  |  |  |  |
-| `c`                             | `class ... {`                    |  |  |  |  |
-| `cc`                            | `class ... {` _w/ constructor_ |  |  |  |  |
+| Shortcut | Output                         |     |     |     |     |     |     |
+| -------- | ------------------------------ | --- | --- | --- | --- | --- | --- | --- |
+| `$_`     | `$_COOKIE['...']`              |     |     |     |     |     |     |     |
+| `$_`     | `$_ENV['...']`                 |     |     |     |     |     |     |     |
+| `$_`     | `$_FILES['...']`               |     |     |     |     |     |     |     |
+| `$_`     | `$_GET['...']`                 |     |     |     |     |     |     |     |
+| `$_`     | `$_POST['...']`                |     |     |     |     |     |     |     |
+| `$_`     | `$_REQUEST['...']`             |     |     |     |     |     |     |     |
+| `$_`     | `$_SERVER['...']`              |     |     |     |     |     |     |     |
+| `$_`     | `$_SESSION['...']`             |     |     |     |     |     |     |     |
+| `r`      | `return;`                      |     |     |     |     |     |     |
+| `dd`     | `dd(...)`                      |     |     |     |     |     |     |
+| `trt`    | `trait ... {`                  |     |     |     |     |     |     |
+| `?=`     | `<?= ... ?>`                   |     |     |     |     |     |     |
+| `c`      | `class ... {`                  |     |     |     |     |     |     |
+| `cc`     | `class ... {` _w/ constructor_ |     |     |     |     |     |     |
 
 _As much as possible I try and make the ... be where your cursor ends up._
 
@@ -107,141 +107,128 @@ _As much as possible I try and make the ... be where your cursor ends up._
 <details>
 <summary>Snippets SQL in PHP</summary>
 
-- p:sqlDb => $db = Db::getInstance();
-- p:sqlDb1 => $db = Db::getInstance(_PS_USE_SQL_SLAVE_);
-- p:prefix => Get Data base prefix _DB_PREFIX_
-- p:prefix1 => Get Data base prefix Db::getInstance->getPrefix();
-- p:sqlQuery => Show an instance of DBQuery
-- p:sqlExecute => Prestashop DB execute function
-- p:sqlExecuteS => Prestashop DB executeS function
-- p:sqlRow => Give a Db::getInstance()->getRow($sql);
-- p:sqlVal => Give a Db::getInstance()->getValue($sql);
-- p:sqlInsert => SQL prestashop insert into
-- p:sqlInsert1 => SQL insert into 1
-- p:sqlInsert2 => SQL insert into 2
-- p:sqlUpdate => SQL update
-- p:sqlDelete => SQL prestashop delete
-- p:sqlDelete1 => SQL delete
-- p:sqlGetLastId => SQL returns the ID created during the latest INSERT query
-- p:sqlAffectedRows => SQL returns the number of lines impacted by the latest UPDATE or DELETE query
-- p:sqlGetMsgError => SQL returns the latest error message, if the query has failed
-- p:sqlGetNumberError => SQL returns the latest error number, if the query has failed
-- p:sqlEscape => SQL Sanitize data which will be injected into SQL query
-- p:sqlNumRows => SQL Get the number of rows in a result
+-   p:sqlDb => $db = Db::getInstance();
+-   p:sqlDb1 => $db = Db::getInstance(_PS_USE_SQL_SLAVE_);
+-   p:prefix => Get Data base prefix _DB_PREFIX_
+-   p:prefix1 => Get Data base prefix Db::getInstance->getPrefix();
+-   p:sqlQuery => Show an instance of DBQuery
+-   p:sqlExecute => Prestashop DB execute function
+-   p:sqlExecuteS => Prestashop DB executeS function
+-   p:sqlRow => Give a Db::getInstance()->getRow($sql);
+-   p:sqlVal => Give a Db::getInstance()->getValue($sql);
+-   p:sqlInsert => SQL prestashop insert into
+-   p:sqlInsert1 => SQL insert into 1
+-   p:sqlInsert2 => SQL insert into 2
+-   p:sqlUpdate => SQL update
+-   p:sqlDelete => SQL prestashop delete
+-   p:sqlDelete1 => SQL delete
+-   p:sqlGetLastId => SQL returns the ID created during the latest INSERT query
+-   p:sqlAffectedRows => SQL returns the number of lines impacted by the latest UPDATE or DELETE query
+-   p:sqlGetMsgError => SQL returns the latest error message, if the query has failed
+-   p:sqlGetNumberError => SQL returns the latest error number, if the query has failed
+-   p:sqlEscape => SQL Sanitize data which will be injected into SQL query
+-   p:sqlNumRows => SQL Get the number of rows in a result
 
 ### Configuration storage service
 
 #### Store configuration data
 
-- p:configuration::set => Configuration::set(string $key, mixed $value, ShopConstraint $shopConstraint = null);
+-   p:configuration::set => Configuration::set(string $key, mixed $value, ShopConstraint $shopConstraint = null);
 
-  > This method returns true if the operation is successful, false otherwise.
-  >
+    > This method returns true if the operation is successful, false otherwise.
 
 #### Check if a configuration data set exists
 
-- p:configuration::has => Configuration::has(string $key, ShopConstraint $shopConstraint = null);
+-   p:configuration::has => Configuration::has(string $key, ShopConstraint $shopConstraint = null);
 
-  > This method returns true if the data exists, false otherwise.
-  >
+    > This method returns true if the data exists, false otherwise.
 
 #### Update configuration data
 
-- p:configuration::updateValue => Configuration::updateValue(string $key, mixed $default = null);
+-   p:configuration::updateValue => Configuration::updateValue(string $key, mixed $default = null);
 
-  > This method returns the data for $key if it data exists, or NULL otherwise.
-  >
+    > This method returns the data for $key if it data exists, or NULL otherwise.
 
 #### Retrieve configuration data
 
-- p:configuration::get => Configuration::get(string $key, mixed $default = null);
+-   p:configuration::get => Configuration::get(string $key, mixed $default = null);
 
-  > This method returns the data for $key if it data exists, or NULL otherwise.
-  >
-  > If the data is stored as multi language, this will return an array of values indexed by language id.
-  >
+    > This method returns the data for $key if it data exists, or NULL otherwise.
+    >
+    > If the data is stored as multi language, this will return an array of values indexed by language id.
 
 #### Delete configuration
 
-- p:configuration::remove = > Configuration::remove(string $key);
+-   p:configuration::remove = > Configuration::remove(string $key);
 
-  > This method returns nothing, and throws an Exception on error.
-  >
+    > This method returns nothing, and throws an Exception on error.
 
 </details>
 
 <details>
 <summary>Snippets Smarty</summary>
 
-- p:l => {l s='' mod='' d='Shop.Theme.Action'}
-- p:l => {l s='' sprintf=[$var|intval] mod='<module_name>' d='Shop.Theme.Action'}
-- p:dump => {$var|dump}
-- p:vdump => {$var|var_dump}
-- p:printr => {$var|print_r}
-- p:hook => {hook h='<hook_name>' mod='<hook_name>'}
-- p:widget => {widget name='<module_name>' hook='<hook_name>'}
-- p:token => {Tools::getAdminTokenLite('<admin_controller_name>')}
-- p:s.get => {$smarty.get.<get_parammetr>}
-  > display value of page from URL ($\_GET) http://www.example.com/index.php?page=foo
-  >
-- p:s.post => {$smarty.post.<post_parammetr>}
-  > display the variable "page" from a form ($\_POST['page'])
-  >
-- p:s.cookie => {$smarty.cookies.username}
-  > display the value of the cookie "username" ($\_COOKIE['username'])
-  >
-- p:s.server_name => {$smarty.server.SERVER_NAME}
-  > display the server variable "SERVER_NAME" ($\_SERVER['SERVER_NAME'])
-  >
-- p:s.path => {$smarty.env.PATH}
-  > display the system environment variable "PATH"
-  >
-- p:s.session.id => {$smarty.session.id}
-  > display the php session variable "id" ($\_SESSION['id'])
-  >
-- p:s.request.username => {$smarty.request.username}
-  > display the variable "username" from merged get/post/cookies/server/env
-  >
+-   p:l => {l s='' mod='' d='Shop.Theme.Action'}
+-   p:l => {l s='' sprintf=[$var|intval] mod='<module_name>' d='Shop.Theme.Action'}
+-   p:dump => {$var|dump}
+-   p:vdump => {$var|var_dump}
+-   p:printr => {$var|print_r}
+-   p:hook => {hook h='<hook_name>' mod='<hook_name>'}
+-   p:widget => {widget name='<module_name>' hook='<hook_name>'}
+-   p:token => {Tools::getAdminTokenLite('<admin_controller_name>')}
+-   p:s.get => {$smarty.get.<get_parammetr>}
+    > display value of page from URL ($\_GET) http://www.example.com/index.php?page=foo
+-   p:s.post => {$smarty.post.<post_parammetr>}
+    > display the variable "page" from a form ($\_POST['page'])
+-   p:s.cookie => {$smarty.cookies.username}
+    > display the value of the cookie "username" ($\_COOKIE['username'])
+-   p:s.server_name => {$smarty.server.SERVER_NAME}
+    > display the server variable "SERVER_NAME" ($\_SERVER['SERVER_NAME'])
+-   p:s.path => {$smarty.env.PATH}
+    > display the system environment variable "PATH"
+-   p:s.session.id => {$smarty.session.id}
+    > display the php session variable "id" ($\_SESSION['id'])
+-   p:s.request.username => {$smarty.request.username}
+    > display the variable "username" from merged get/post/cookies/server/env
 
 ### Link to admin controller
 
-- p:link-admin-controller => {$link->getAdminLink('<admin_controller_name>')}
+-   p:link-admin-controller => {$link->getAdminLink('<admin_controller_name>')}
 
 ### Link to page (new-products, specials, my-account etc.)
 
-- p:link-page-1.6 => {$link->getPageLink()}
-- p:link-page-1.7 => {url entity='my-account' params=['edited' => 1, 'id' => $id]}
+-   p:link-page-1.6 => {$link->getPageLink()}
+-   p:link-page-1.7 => {url entity='my-account' params=['edited' => 1, 'id' => $id]}
 
 ### Link to category
 
-- p:link-category-1.6 => {$link->getCategoryLink()}
-- p:link-category-1.7 => {url entity='category' id=<id_category> id_lang=<id_lang>}
+-   p:link-category-1.6 => {$link->getCategoryLink()}
+-   p:link-category-1.7 => {url entity='category' id=<id_category> id_lang=<id_lang>}
 
 ### Link to product
 
-- p:link-product-1.6 => {$link->getProductLink()}
-- p:link-product-1.7 => {url entity='product' id=<id_product>}
+-   p:link-product-1.6 => {$link->getProductLink()}
+-   p:link-product-1.7 => {url entity='product' id=<id_product>}
 
 ### Link to module
 
-- p:link-module-1.6 => {$link->getModuleLink('<module_name>','<controller_name>','<array_of_params>')}
-- p:link-module-1.7 => {url entity='module' name='myModule' controller='myController' params = ['paramKey1' => $paramValue1, 'paramKey2' => $paramValue2]}
+-   p:link-module-1.6 => {$link->getModuleLink('<module_name>','<controller_name>','<array_of_params>')}
+-   p:link-module-1.7 => {url entity='module' name='myModule' controller='myController' params = ['paramKey1' => $paramValue1, 'paramKey2' => $paramValue2]}
 
 ### Link to image
 
-- p:link-image-1.6 => {$link->getCatImageLink()}
-- p:link-image-1.7 => {url entity='categoryImage' id=$id_category name='imageType'}
+-   p:link-image-1.6 => {$link->getCatImageLink()}
+-   p:link-image-1.7 => {url entity='categoryImage' id=$id_category name='imageType'}
 
-  > imageType
-  >
+    > imageType
 
-  cart_default (125px x 125px)
-  small_default (98px x 98px)
-  medium_default (452px x 452px)
-  home_default (250px x 250px)
-  large_default (800px x 800px)
-  category_default (141px x 180px)
-  stores_default (170px x 115px)
+    cart_default (125px x 125px)
+    small_default (98px x 98px)
+    medium_default (452px x 452px)
+    home_default (250px x 250px)
+    large_default (800px x 800px)
+    category_default (141px x 180px)
+    stores_default (170px x 115px)
 
 </details>
 
@@ -250,57 +237,61 @@ _As much as possible I try and make the ... be where your cursor ends up._
 
 Generate media queries for these devices
 
-- p:media_phone => Generate Media Query Phone
+-   p:media_phone => Generate Media Query Phone
 
-  ```
-  @media screen and (max-width: 767px) {
+    ```
+    @media screen and (max-width: 767px) {
 
-  }
-  ```
-- p:media_tablet => Generate Media Query Tablet
+    }
+    ```
 
-  ```
-  @media screen and (min-width: 768px) and (max-width: 991px) {
+-   p:media_tablet => Generate Media Query Tablet
 
-  }
-  ```
-- p:media_desktop => Generate Media Query Desktop
+    ```
+    @media screen and (min-width: 768px) and (max-width: 991px) {
 
-  ```
-  @media screen and (min-width: 992px) {
+    }
+    ```
 
-  }
-  ```
-- p:flex-center => Display Flex Center attributes
+-   p:media_desktop => Generate Media Query Desktop
 
-  ```
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  ```
+    ```
+    @media screen and (min-width: 992px) {
+
+    }
+    ```
+
+-   p:flex-center => Display Flex Center attributes
+
+    ```
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    ```
 
 </details>
 
 <details>
 <summary>Snippets JS</summary>
 
-- p:ajaxFrontController => jQuery Ajax Call Your Front Controller
-- p:ajaxAdminController => jQuery Ajax Call Your Admin Controller
-- p:for => For Loop
-- for => For Loop
-- loop => For Loop
+-   p:ajaxFrontController => jQuery Ajax Call Your Front Controller
+-   p:ajaxAdminController => jQuery Ajax Call Your Admin Controller
+-   p:for => For Loop
+-   for => For Loop
+-   loop => For Loop
 
-  ```
-  for (var index = 0; index < array.length; index++) {
-  var element = array[index];
+    ```
+    for (var index = 0; index < array.length; index++) {
+    var element = array[index];
 
-  }
-  ```
-- p:log => Print to console
-- clg => Print to console
-- log => Print to console
+    }
+    ```
 
-  `console.log();`
+-   p:log => Print to console
+-   clg => Print to console
+-   log => Print to console
+
+    `console.log();`
 
 </details>
 
@@ -371,15 +362,15 @@ Source : [https://marketplace.visualstudio.com/items?itemName=apartner-top.prest
 
 ### For more information
 
-- [https://matviy.pp.ua](https://matviy.pp.ua)
-- [https://roman.matviy.pp.ua](https://roman.matviy.pp.ua)
+-   [https://matviy.pp.ua](https://matviy.pp.ua)
+-   [https://roman.matviy.pp.ua](https://roman.matviy.pp.ua)
 
 ### Our partners
 
-- [https://apartner.top](https://apartner.top)
-- [https://programist.top](https://programist.top)
-- [https://tools.apartner.top](https://tools.apartner.top)
-- [https://ogo.biz.ua](https://ogo.biz.ua)
+-   [https://apartner.top](https://apartner.top)
+-   [https://programist.top](https://programist.top)
+-   [https://tools.apartner.top](https://tools.apartner.top)
+-   [https://ogo.biz.ua](https://ogo.biz.ua)
 
 <!-- -  [Visual Studio Code's Markdown Support](http://code.visualstudio.com/docs/languages/markdown)
 -  [Markdown Syntax Reference](https://help.github.com/articles/markdown-basics/) -->
