@@ -272,18 +272,16 @@ Generate media queries for these devices
 </details>
 
 <details>
-<summary>Snippets JS</summary>
+<summary>Snippets Vanila JS, jQuery</summary>
 
--   p:ajaxFrontController => jQuery Ajax Call Your Front Controller
--   p:ajaxAdminController => jQuery Ajax Call Your Admin Controller
+### Vanila JS
 -   p:for => For Loop
 -   for => For Loop
 -   loop => For Loop
 
     ```
     for (var index = 0; index < array.length; index++) {
-    var element = array[index];
-
+        var element = array[index];
     }
     ```
 
@@ -291,7 +289,48 @@ Generate media queries for these devices
 -   clg => Print to console
 -   log => Print to console
 
-    `console.log();`
+    ```console.log();```
+
+### jQuery
+-   p:eachBasic => Basic jQuery.each()
+    ```
+    $('element').each(function(index, value){"
+        console.log(this.text());
+    "});
+    ```
+
+-   p:eachArray => Array jQuery.each()
+    ```
+    $.each(array, function(index, value){
+        console.log(`${index}: ${value}`);
+    });
+    ```
+
+-   p:eachJSON => JSON jQuery.each()
+    ```
+    const colors = [
+        { 'red': '#f00' },
+        { 'green': '#0f0' },
+        { 'blue': '#00f' }
+    ];
+
+    $.each(colors, function() {
+        $.each(this, function(name, value) {
+            console.log(`${name} = ${value}`);
+        });
+    });
+    ```
+
+-   p:eachCLASS => CLASS jQuery.each()
+    ```
+    $.each($('.link'), function(index, value) {
+        console.log(index + ':' + $(value).text());
+    });
+    ```
+
+-   p:ajaxFrontController => jQuery Ajax Call Your Front Controller
+-   p:ajaxAdminController => jQuery Ajax Call Your Admin Controller
+
 
 </details>
 
@@ -345,9 +384,9 @@ Added snippets smarty, html.
 Smarty language pack & PHP Symbols & PHP DocBlocker & HTML $ CSS!
 
 Author : [Roman Matviy](https://roman.matviy.pp.ua)
-`<br>`
+<br>
 Site : [https://matviy.pp.ua](https://matviy.pp.ua)
-`<br>`
+<br>
 Source : [https://marketplace.visualstudio.com/items?itemName=apartner-top.prestashop-snippets](https://marketplace.visualstudio.com/items?itemName=apartner-top.prestashop-snippets)
 
 # Donate
