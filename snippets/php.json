@@ -67,8 +67,8 @@
 
 	"p:dump": {
 		"prefix": "p:dump",
-		"body": ["var_dump(${0});"],
-		"description": "var_dump function for PHP"
+		"body": ["dump(${0});"],
+		"description": "dump function of PrestaShop"
 	},
 
 	"p:printr": {
