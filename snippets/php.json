@@ -512,7 +512,7 @@
 			"}",
 			"public function run()",
 			"{",
-			"    if (mb_strtolower(Tools::getValue('action') == mb_strtolower('doSomeAction')) {",
+			"    if (mb_strtolower(Tools::getValue('action')) == mb_strtolower('doSomeAction')) {",
 			"        FrontController::init();",
 			"        \\$this->displayAjaxDoSomeAction();",
 			"    }",
