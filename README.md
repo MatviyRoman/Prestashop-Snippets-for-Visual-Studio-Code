@@ -1,11 +1,9 @@
-<a href="https://war.ukraine.ua"><img style="max-width: 1920px; width: 100%;" src="images/war.png" alt="russia invaded Ukraine"></a><br>
-<a href="https://bank.gov.ua/en/news/all/natsionalniy-bank-vidkriv-spetsrahunok-dlya-zboru-koshtiv-na-potrebi-armiyi"><img style="max-width: 1920px; width: 100%;" src="images/support-Ukraine.png" alt="support Ukraine"></a>
-
-#
+` <a href="https://war.ukraine.ua"><img style="max-width: 1920px; width: 100%;" src="images/war.png" alt="russia invaded Ukraine">``</a><br> `
+` <a href="https://bank.gov.ua/en/news/all/natsionalniy-bank-vidkriv-spetsrahunok-dlya-zboru-koshtiv-na-potrebi-armiyi"><img style="max-width: 1920px; width: 100%;" src="images/support-Ukraine.png" alt="support Ukraine">``</a> `
 
 # Prestashop Snippets Tools README
 
-Prestashop snippets tools for 1.6 and 1.7 versions.<br>
+Prestashop snippets tools for 1.6 and 1.7 versions.`<br>`
 This extension will help you faster to make common using snippets.
 
 PHP snippets to help you be more productive when developing in PHP
@@ -18,7 +16,8 @@ Support `tab` to previous/next slug.
 -   p:ajaxMethod => Ajax Call Your Method
 -   p:ajaxAdminController => Ajax Call Your Admin Controller Code
 -   p:ajaxFrontController => Ajax Call Your Front Controller Code
--   p:dump => var_dump('');
+-   p:dump => dump('');
+-   p:vdump => var_dump('');
 -   p:printr => print_r('');
 -   p:getIsset => Checks if a key exists either in $\_POST or $\_GET Tools::getIsset('');
 -   p:getval => Tools::getValue('');
@@ -40,6 +39,7 @@ Support `tab` to previous/next slug.
 -   p:module => Create a Prestashop Module sample !
 -   p:assign => Give a $this->context->smarty->assign(array());
 -   p:mail_send => Give a complete Mail::send() call
+-
 
 ### Functions with PHPStorm
 
@@ -67,22 +67,22 @@ Support `tab` to previous/next slug.
 
 ### php snippets
 
-| Shortcut | Output                         |
-| -------- | ------------------------------ |
-| `$_`     | `$_COOKIE['...']`              |
-| `$_`     | `$_ENV['...']`                 |
-| `$_`     | `$_FILES['...']`               |
-| `$_`     | `$_GET['...']`                 |
-| `$_`     | `$_POST['...']`                |
-| `$_`     | `$_REQUEST['...']`             |
-| `$_`     | `$_SERVER['...']`              |
-| `$_`     | `$_SESSION['...']`             |
-| `r`      | `return;`                      |
-| `dd`     | `dd(...)`                      |
-| `trt`    | `trait ... {`                  |
-| `?=`     | `<?= ... ?>`                   |
-| `c`      | `class ... {`                  |
-| `cc`     | `class ... {` _w/ constructor_ |
+| Shortcut | Output                         |     |     |
+| -------- | ------------------------------ | --- | --- | --- |
+| `$_`     | `$_COOKIE['...']`              |     |     |     |
+| `$_`     | `$_ENV['...']`                 |     |     |     |
+| `$_`     | `$_FILES['...']`               |     |     |     |
+| `$_`     | `$_GET['...']`                 |     |     |     |
+| `$_`     | `$_POST['...']`                |     |     |     |
+| `$_`     | `$_REQUEST['...']`             |     |     |     |
+| `$_`     | `$_SERVER['...']`              |     |     |     |
+| `$_`     | `$_SESSION['...']`             |     |     |     |
+| `r`      | `return;`                      |     |     |
+| `dd`     | `dd(...)`                      |     |     |
+| `trt`    | `trait ... {`                  |     |     |
+| `?=`     | `<?= ... ?>`                   |     |     |
+| `c`      | `class ... {`                  |     |     |
+| `cc`     | `class ... {` _w/ constructor_ |     |     |
 
 _As much as possible I try and make the ... be where your cursor ends up._
 
@@ -220,15 +220,15 @@ _As much as possible I try and make the ... be where your cursor ends up._
 -   p:link-image-1.6 => {$link->getCatImageLink()}
 -   p:link-image-1.7 => {url entity='categoryImage' id=$id_category name='imageType'}
 
-        > imageType
+    > imageType
 
-             cart_default (125px x 125px)
-             small_default (98px x 98px)
-             medium_default (452px x 452px)
-             home_default (250px x 250px)
-             large_default (800px x 800px)
-             category_default (141px x 180px)
-             stores_default (170px x 115px)
+    cart_default (125px x 125px)
+    small_default (98px x 98px)
+    medium_default (452px x 452px)
+    home_default (250px x 250px)
+    large_default (800px x 800px)
+    category_default (141px x 180px)
+    stores_default (170px x 115px)
 
 </details>
 
@@ -276,25 +276,22 @@ Generate media queries for these devices
 
 -   p:ajaxFrontController => jQuery Ajax Call Your Front Controller
 -   p:ajaxAdminController => jQuery Ajax Call Your Admin Controller
-
 -   p:for => For Loop
 -   for => For Loop
 -   loop => For Loop
 
-        ```
-         for (var index = 0; index < array.length; index++) {
-            var element = array[index];
+    ```
+    for (var index = 0; index < array.length; index++) {
+    var element = array[index];
 
-        }
-        ```
+    }
+    ```
 
 -   p:log => Print to console
 -   clg => Print to console
 -   log => Print to console
 
-        ```
-        console.log();
-        ```
+    `console.log();`
 
 </details>
 
@@ -306,8 +303,10 @@ For example if there is an image subfolder under your extension project workspac
 \!\[feature X\]\(images/feature-x.png\)
 
 > Tip: Many popular extensions utilize animations. This is an excellent way to show off your extension! We recommend short, focused animations that are easy to follow. -->
+
 <!-- ## Requirements
 If you have any requirements or dependencies, add a section describing those and how to install and configure them. -->
+
 <!-- ## Extension Settings
 
 Include if your extension adds any VS Code settings through the `contributes.configuration` extension point.
@@ -318,8 +317,10 @@ This extension contributes the following settings:
 
 -  `myExtension.enable`: enable/disable this extension
 -  `myExtension.thing`: set to `blah` to do something -->
+
 <!-- ## Known Issues
 Calling out known issues can help limit users opening duplicate issues against your extension. -->
+
 <!-- ## Release Notes
 Users appreciate release notes as you update your extension.
 ### 0.0.1
@@ -343,10 +344,10 @@ Added snippets smarty, html.
 
 Smarty language pack & PHP Symbols & PHP DocBlocker & HTML $ CSS!
 
-Author : [Roman Matviy](https://roman.programist.top)
-<br>
+Author : [Roman Matviy](https://roman.matviy.pp.ua)
+`<br>`
 Site : [https://matviy.pp.ua](https://matviy.pp.ua)
-<br>
+`<br>`
 Source : [https://marketplace.visualstudio.com/items?itemName=apartner-top.prestashop-snippets](https://marketplace.visualstudio.com/items?itemName=apartner-top.prestashop-snippets)
 
 # Donate
@@ -355,7 +356,7 @@ Source : [https://marketplace.visualstudio.com/items?itemName=apartner-top.prest
 <p>QR Code</p>
 <p><a href="https://github.com/MatviyRoman/resass/blob/master/img/qr-code.png?raw=true" target="_blank" rel="noopener noreferrer"><img src="https://github.com/MatviyRoman/resass/raw/master/img/qr-code.png?raw=true" alt="donation resass media queries" style="max-width:100%;"></a></p>
 <p>Or PayPall</p>
-<p><a href="https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&amp;hosted_button_id=E2H8329XLYRKQ&amp;source=url" rel="nofollow"><img src="https://camo.githubusercontent.com/361950b331ef676b7eec436a4dbe5a7ce47211a6623dcc889b1f5b7b611b27df/68747470733a2f2f7777772e70617970616c6f626a656374732e636f6d2f656e5f55532f692f62746e2f62746e5f646f6e61746543435f4c472e676966" alt="Donate" data-canonical-src="https://www.paypalobjects.com/en_US/i/btn/btn_donateCC_LG.gif" style="max-width:100%;"></a></p>
+<p><a href="https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=E2H8329XLYRKQ&source=url" rel="nofollow"><img src="https://camo.githubusercontent.com/361950b331ef676b7eec436a4dbe5a7ce47211a6623dcc889b1f5b7b611b27df/68747470733a2f2f7777772e70617970616c6f626a656374732e636f6d2f656e5f55532f692f62746e2f62746e5f646f6e61746543435f4c472e676966" alt="Donate" data-canonical-src="https://www.paypalobjects.com/en_US/i/btn/btn_donateCC_LG.gif" style="max-width:100%;"></a></p>
 <p>Thank You!</p>
 <br>
 
@@ -365,7 +366,7 @@ Source : [https://marketplace.visualstudio.com/items?itemName=apartner-top.prest
 -   [https://programist.top](https://programist.top)
 -   [https://ogo.biz.ua](https://ogo.biz.ua)
 -   [https://matviy.pp.ua](https://matviy.pp.ua)
--   [https://roman.programist.top](https://roman.programist.top)
+-   [https://roman.matviy.pp.ua](https://roman.matviy.pp.ua)
 
 <!-- -  [Visual Studio Code's Markdown Support](http://code.visualstudio.com/docs/languages/markdown)
 -  [Markdown Syntax Reference](https://help.github.com/articles/markdown-basics/) -->
