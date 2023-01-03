@@ -3,7 +3,7 @@
 
 # Prestashop Snippets Tools README
 
-Prestashop snippets tools for 1.6 and 1.7 versions.`<br>`
+Prestashop snippets tools for 1.6 and 1.7 versions.<br>
 This extension will help you faster to make common using snippets.
 
 PHP snippets to help you be more productive when developing in PHP
@@ -275,6 +275,7 @@ Generate media queries for these devices
 <summary>Snippets Vanila JS, jQuery</summary>
 
 ### Vanila JS
+
 -   p:for => For Loop
 -   for => For Loop
 -   loop => For Loop
@@ -289,10 +290,12 @@ Generate media queries for these devices
 -   clg => Print to console
 -   log => Print to console
 
-    ```console.log();```
+    `console.log();`
 
 ### jQuery
+
 -   p:eachBasic => Basic jQuery.each()
+
     ```
     $('element').each(function(index, value){"
         console.log(this.text());
@@ -300,6 +303,7 @@ Generate media queries for these devices
     ```
 
 -   p:eachArray => Array jQuery.each()
+
     ```
     $.each(array, function(index, value){
         console.log(`${index}: ${value}`);
@@ -307,6 +311,7 @@ Generate media queries for these devices
     ```
 
 -   p:eachJSON => JSON jQuery.each()
+
     ```
     const colors = [
         { 'red': '#f00' },
@@ -322,6 +327,7 @@ Generate media queries for these devices
     ```
 
 -   p:eachCLASS => CLASS jQuery.each()
+
     ```
     $.each($('.link'), function(index, value) {
         console.log(index + ':' + $(value).text());
@@ -330,7 +336,6 @@ Generate media queries for these devices
 
 -   p:ajaxFrontController => jQuery Ajax Call Your Front Controller
 -   p:ajaxAdminController => jQuery Ajax Call Your Admin Controller
-
 
 </details>
 
@@ -409,7 +414,9 @@ Source : [https://marketplace.visualstudio.com/items?itemName=apartner-top.prest
 -   [https://apartner.top](https://apartner.top)
 -   [https://programist.top](https://programist.top)
 -   [https://tools.apartner.top](https://tools.apartner.top)
+-   [https://monitor-test.apartner.top](https://monitor-test.apartner.top)
 -   [https://ogo.biz.ua](https://ogo.biz.ua)
+-   [https://keytest.pp.ua](https://keytest.pp.ua)
 
 <!-- -  [Visual Studio Code's Markdown Support](http://code.visualstudio.com/docs/languages/markdown)
 -  [Markdown Syntax Reference](https://help.github.com/articles/markdown-basics/) -->
